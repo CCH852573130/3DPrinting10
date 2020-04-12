@@ -34,7 +34,6 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
       case R.id.button3:
         Intent intent2 = new Intent();
         intent2.setClass(getApplicationContext(), MoXingKu.class);
-        Toast.makeText( getApplicationContext(),"龚雨晨",Toast.LENGTH_LONG );
         startActivity(intent2);
         break;
       case R.id.button2:
