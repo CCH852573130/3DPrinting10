@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 //主界面跳转到四个分界面
 public class ZhuJieMian extends AppCompatActivity implements View.OnClickListener {
@@ -33,6 +34,7 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
       case R.id.button3:
         Intent intent2 = new Intent();
         intent2.setClass(getApplicationContext(), MoXingKu.class);
+        Toast.makeText( getApplicationContext(),"龚雨晨",Toast.LENGTH_LONG );
         startActivity(intent2);
         break;
       case R.id.button2:
