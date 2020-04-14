@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -51,11 +51,11 @@ build stb: phony CMakeFiles/stb CMakeFiles/stb-complete stb-prefix/src/stb-stamp
 # Order-only phony target for clipper
 
 build cmake_object_order_depends_target_clipper: phony
-build CMakeFiles/clipper.dir/libs/clipper/clipper.cpp.o: CXX_COMPILER__clipper D$:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper/clipper.cpp || cmake_object_order_depends_target_clipper
+build CMakeFiles/clipper.dir/libs/clipper/clipper.cpp.o: CXX_COMPILER__clipper D$:/3DPrinting10/app/src/main/cpp/libs/clipper/clipper.cpp || cmake_object_order_depends_target_clipper
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -Dclipper_EXPORTS
   DEP_FILE = CMakeFiles\clipper.dir\libs\clipper\clipper.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\clipper.dir
   OBJECT_FILE_DIR = CMakeFiles\clipper.dir\libs\clipper
 
@@ -64,9 +64,9 @@ build CMakeFiles/clipper.dir/libs/clipper/clipper.cpp.o: CXX_COMPILER__clipper D
 
 
 #############################################
-# Link the shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libclipper.so
+# Link the shared library D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libclipper.so
 
-build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so: CXX_SHARED_LIBRARY_LINKER__clipper CMakeFiles/clipper.dir/libs/clipper/clipper.cpp.o
+build D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so: CXX_SHARED_LIBRARY_LINKER__clipper CMakeFiles/clipper.dir/libs/clipper/clipper.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments
   LINK_LIBRARIES = -latomic -lm
@@ -75,7 +75,7 @@ build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/ar
   PRE_LINK = cd .
   SONAME = libclipper.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libclipper.so
+  TARGET_FILE = D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libclipper.so
   TARGET_PDB = clipper.so.dbg
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target _CuraEngine
@@ -85,564 +85,564 @@ build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/ar
 # Order-only phony target for _CuraEngine
 
 build cmake_object_order_depends_target__CuraEngine: phony || cmake_object_order_depends_target_clipper stb
-build CMakeFiles/_CuraEngine.dir/src/Application.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Application.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Application.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Application.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Application.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/bridge.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/bridge.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/bridge.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/bridge.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\bridge.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/ConicalOverhang.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/ConicalOverhang.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/ConicalOverhang.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/ConicalOverhang.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\ConicalOverhang.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/ExtruderTrain.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/ExtruderTrain.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/ExtruderTrain.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/ExtruderTrain.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\ExtruderTrain.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/FffGcodeWriter.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/FffGcodeWriter.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/FffGcodeWriter.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/FffGcodeWriter.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\FffGcodeWriter.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/FffPolygonGenerator.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/FffPolygonGenerator.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/FffPolygonGenerator.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/FffPolygonGenerator.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\FffPolygonGenerator.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/FffProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/FffProcessor.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/FffProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/FffProcessor.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\FffProcessor.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/gcodeExport.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/gcodeExport.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/gcodeExport.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/gcodeExport.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\gcodeExport.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/GCodePathConfig.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/GCodePathConfig.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/GCodePathConfig.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/GCodePathConfig.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\GCodePathConfig.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/infill.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/InsetOrderOptimizer.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/InsetOrderOptimizer.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/InsetOrderOptimizer.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/InsetOrderOptimizer.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\InsetOrderOptimizer.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/layerPart.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/layerPart.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/layerPart.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/layerPart.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\layerPart.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/LayerPlan.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/LayerPlan.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/LayerPlan.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/LayerPlan.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\LayerPlan.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/LayerPlanBuffer.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/LayerPlanBuffer.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/LayerPlanBuffer.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/LayerPlanBuffer.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\LayerPlanBuffer.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/MergeInfillLines.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/MergeInfillLines.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/MergeInfillLines.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/MergeInfillLines.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\MergeInfillLines.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/mesh.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/mesh.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/mesh.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/mesh.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\mesh.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/MeshGroup.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/MeshGroup.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/MeshGroup.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/MeshGroup.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\MeshGroup.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Mold.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Mold.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Mold.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Mold.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Mold.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/multiVolumes.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/multiVolumes.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/multiVolumes.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/multiVolumes.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\multiVolumes.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/pathOrderOptimizer.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathOrderOptimizer.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathOrderOptimizer.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathOrderOptimizer.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathOrderOptimizer.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Preheat.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Preheat.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Preheat.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Preheat.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Preheat.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/PrimeTower.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/PrimeTower.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/PrimeTower.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/PrimeTower.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\PrimeTower.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/raft.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/raft.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/raft.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/raft.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\raft.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Scene.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Scene.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Scene.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Scene.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Scene.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/skin.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/skin.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/skin.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/skin.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\skin.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/SkirtBrim.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/SkirtBrim.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/SkirtBrim.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/SkirtBrim.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\SkirtBrim.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/SupportInfillPart.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/SupportInfillPart.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/SupportInfillPart.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/SupportInfillPart.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\SupportInfillPart.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Slice.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Slice.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Slice.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Slice.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Slice.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/sliceDataStorage.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/sliceDataStorage.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/sliceDataStorage.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/sliceDataStorage.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\sliceDataStorage.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/slicer.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/slicer.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/slicer.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/slicer.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\slicer.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/support.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/support.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/support.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/support.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\support.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/timeEstimate.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/timeEstimate.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/timeEstimate.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/timeEstimate.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\timeEstimate.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/TopSurface.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/TopSurface.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/TopSurface.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/TopSurface.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\TopSurface.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/TreeSupport.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/TreeSupport.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/TreeSupport.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/TreeSupport.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\TreeSupport.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/WallsComputation.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/WallsComputation.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/WallsComputation.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/WallsComputation.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\WallsComputation.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/wallOverlap.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/wallOverlap.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/wallOverlap.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/wallOverlap.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\wallOverlap.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Weaver.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Weaver.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Weaver.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Weaver.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Weaver.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/Wireframe2gcode.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/Wireframe2gcode.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/Wireframe2gcode.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/Wireframe2gcode.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\Wireframe2gcode.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src
-build CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunication.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/communication/ArcusCommunication.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunication.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/communication/ArcusCommunication.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\communication\ArcusCommunication.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\communication
-build CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunicationPrivate.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/communication/ArcusCommunicationPrivate.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunicationPrivate.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/communication/ArcusCommunicationPrivate.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\communication\ArcusCommunicationPrivate.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\communication
-build CMakeFiles/_CuraEngine.dir/src/communication/CommandLine.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/communication/CommandLine.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/communication/CommandLine.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/communication/CommandLine.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\communication\CommandLine.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\communication
-build CMakeFiles/_CuraEngine.dir/src/communication/Listener.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/communication/Listener.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/communication/Listener.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/communication/Listener.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\communication\Listener.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\communication
-build CMakeFiles/_CuraEngine.dir/src/infill/ImageBasedDensityProvider.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/ImageBasedDensityProvider.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/ImageBasedDensityProvider.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/ImageBasedDensityProvider.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\ImageBasedDensityProvider.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/NoZigZagConnectorProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/NoZigZagConnectorProcessor.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/NoZigZagConnectorProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/NoZigZagConnectorProcessor.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\NoZigZagConnectorProcessor.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/ZigzagConnectorProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/ZigzagConnectorProcessor.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/ZigzagConnectorProcessor.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/ZigzagConnectorProcessor.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\ZigzagConnectorProcessor.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFill.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/SierpinskiFill.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFill.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/SierpinskiFill.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\SierpinskiFill.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFillProvider.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/SierpinskiFillProvider.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFillProvider.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/SierpinskiFillProvider.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\SierpinskiFillProvider.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfill.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/SpaghettiInfill.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfill.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/SpaghettiInfill.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\SpaghettiInfill.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfillPathGenerator.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/SpaghettiInfillPathGenerator.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfillPathGenerator.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/SpaghettiInfillPathGenerator.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\SpaghettiInfillPathGenerator.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/SubDivCube.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/SubDivCube.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/SubDivCube.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/SubDivCube.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\SubDivCube.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/infill/GyroidInfill.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/GyroidInfill.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/infill/GyroidInfill.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/infill/GyroidInfill.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\infill\GyroidInfill.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\infill
-build CMakeFiles/_CuraEngine.dir/src/pathPlanning/Comb.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathPlanning/Comb.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathPlanning/Comb.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathPlanning/Comb.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathPlanning\Comb.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\pathPlanning
-build CMakeFiles/_CuraEngine.dir/src/pathPlanning/GCodePath.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathPlanning/GCodePath.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathPlanning/GCodePath.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathPlanning/GCodePath.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathPlanning\GCodePath.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\pathPlanning
-build CMakeFiles/_CuraEngine.dir/src/pathPlanning/LinePolygonsCrossings.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathPlanning/LinePolygonsCrossings.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathPlanning/LinePolygonsCrossings.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathPlanning/LinePolygonsCrossings.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathPlanning\LinePolygonsCrossings.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\pathPlanning
-build CMakeFiles/_CuraEngine.dir/src/pathPlanning/NozzleTempInsert.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathPlanning/NozzleTempInsert.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathPlanning/NozzleTempInsert.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathPlanning/NozzleTempInsert.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathPlanning\NozzleTempInsert.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\pathPlanning
-build CMakeFiles/_CuraEngine.dir/src/pathPlanning/TimeMaterialEstimates.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/pathPlanning/TimeMaterialEstimates.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/pathPlanning/TimeMaterialEstimates.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/pathPlanning/TimeMaterialEstimates.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\pathPlanning\TimeMaterialEstimates.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\pathPlanning
-build CMakeFiles/_CuraEngine.dir/src/progress/Progress.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/progress/Progress.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/progress/Progress.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/progress/Progress.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\progress\Progress.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\progress
-build CMakeFiles/_CuraEngine.dir/src/progress/ProgressStageEstimator.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/progress/ProgressStageEstimator.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/progress/ProgressStageEstimator.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/progress/ProgressStageEstimator.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\progress\ProgressStageEstimator.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\progress
-build CMakeFiles/_CuraEngine.dir/src/settings/AdaptiveLayerHeights.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/settings/AdaptiveLayerHeights.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/settings/AdaptiveLayerHeights.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/settings/AdaptiveLayerHeights.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\settings\AdaptiveLayerHeights.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\settings
-build CMakeFiles/_CuraEngine.dir/src/settings/FlowTempGraph.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/settings/FlowTempGraph.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/settings/FlowTempGraph.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/settings/FlowTempGraph.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\settings\FlowTempGraph.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\settings
-build CMakeFiles/_CuraEngine.dir/src/settings/PathConfigStorage.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/settings/PathConfigStorage.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/settings/PathConfigStorage.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/settings/PathConfigStorage.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\settings\PathConfigStorage.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\settings
-build CMakeFiles/_CuraEngine.dir/src/settings/Settings.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/settings/Settings.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/settings/Settings.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/settings/Settings.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\settings\Settings.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\settings
-build CMakeFiles/_CuraEngine.dir/src/utils/AABB.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/AABB.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/AABB.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/AABB.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\AABB.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/AABB3D.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/AABB3D.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/AABB3D.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/AABB3D.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\AABB3D.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/Date.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/Date.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/Date.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/Date.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\Date.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/gettime.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/gettime.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/gettime.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/gettime.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\gettime.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/getpath.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/getpath.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/getpath.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/getpath.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\getpath.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/LinearAlg2D.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/LinearAlg2D.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/LinearAlg2D.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/LinearAlg2D.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\LinearAlg2D.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/ListPolyIt.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/ListPolyIt.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/ListPolyIt.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/ListPolyIt.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\ListPolyIt.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/logoutput.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/logoutput.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/logoutput.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/logoutput.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\logoutput.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/MinimumSpanningTree.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/MinimumSpanningTree.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/MinimumSpanningTree.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/MinimumSpanningTree.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\MinimumSpanningTree.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/Point3.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/Point3.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/Point3.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/Point3.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\Point3.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/PolygonConnector.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/PolygonConnector.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/PolygonConnector.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/PolygonConnector.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\PolygonConnector.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/PolygonsPointIndex.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/PolygonsPointIndex.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/PolygonsPointIndex.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/PolygonsPointIndex.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\PolygonsPointIndex.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/PolygonProximityLinker.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/PolygonProximityLinker.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/PolygonProximityLinker.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/PolygonProximityLinker.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\PolygonProximityLinker.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/polygonUtils.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/polygonUtils.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/polygonUtils.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/polygonUtils.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\polygonUtils.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/polygon.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/polygon.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/polygon.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/polygon.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\polygon.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/ProximityPointLink.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/ProximityPointLink.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/ProximityPointLink.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/ProximityPointLink.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\ProximityPointLink.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/SVG.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/SVG.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/SVG.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/SVG.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\SVG.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
-build CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o: CXX_COMPILER___CuraEngine D$:/androidproject/3DPrinting10/app/src/main/cpp/src/utils/socket.cpp || cmake_object_order_depends_target__CuraEngine
+build CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o: CXX_COMPILER___CuraEngine D$:/3DPrinting10/app/src/main/cpp/src/utils/socket.cpp || cmake_object_order_depends_target__CuraEngine
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -DVERSION=\"master\" -D_CuraEngine_EXPORTS
   DEP_FILE = CMakeFiles\_CuraEngine.dir\src\utils\socket.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\_CuraEngine.dir\src\utils
 
@@ -651,18 +651,18 @@ build CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o: CXX_COMPILER___CuraEngi
 
 
 #############################################
-# Link the shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\lib_CuraEngine.so
+# Link the shared library D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\lib_CuraEngine.so
 
-build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so: CXX_SHARED_LIBRARY_LINKER___CuraEngine CMakeFiles/_CuraEngine.dir/src/Application.cpp.o CMakeFiles/_CuraEngine.dir/src/bridge.cpp.o CMakeFiles/_CuraEngine.dir/src/ConicalOverhang.cpp.o CMakeFiles/_CuraEngine.dir/src/ExtruderTrain.cpp.o CMakeFiles/_CuraEngine.dir/src/FffGcodeWriter.cpp.o CMakeFiles/_CuraEngine.dir/src/FffPolygonGenerator.cpp.o CMakeFiles/_CuraEngine.dir/src/FffProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/gcodeExport.cpp.o CMakeFiles/_CuraEngine.dir/src/GCodePathConfig.cpp.o CMakeFiles/_CuraEngine.dir/src/infill.cpp.o CMakeFiles/_CuraEngine.dir/src/InsetOrderOptimizer.cpp.o CMakeFiles/_CuraEngine.dir/src/layerPart.cpp.o CMakeFiles/_CuraEngine.dir/src/LayerPlan.cpp.o CMakeFiles/_CuraEngine.dir/src/LayerPlanBuffer.cpp.o CMakeFiles/_CuraEngine.dir/src/MergeInfillLines.cpp.o CMakeFiles/_CuraEngine.dir/src/mesh.cpp.o CMakeFiles/_CuraEngine.dir/src/MeshGroup.cpp.o CMakeFiles/_CuraEngine.dir/src/Mold.cpp.o CMakeFiles/_CuraEngine.dir/src/multiVolumes.cpp.o CMakeFiles/_CuraEngine.dir/src/pathOrderOptimizer.cpp.o CMakeFiles/_CuraEngine.dir/src/Preheat.cpp.o CMakeFiles/_CuraEngine.dir/src/PrimeTower.cpp.o CMakeFiles/_CuraEngine.dir/src/raft.cpp.o CMakeFiles/_CuraEngine.dir/src/Scene.cpp.o CMakeFiles/_CuraEngine.dir/src/skin.cpp.o CMakeFiles/_CuraEngine.dir/src/SkirtBrim.cpp.o CMakeFiles/_CuraEngine.dir/src/SupportInfillPart.cpp.o CMakeFiles/_CuraEngine.dir/src/Slice.cpp.o CMakeFiles/_CuraEngine.dir/src/sliceDataStorage.cpp.o CMakeFiles/_CuraEngine.dir/src/slicer.cpp.o CMakeFiles/_CuraEngine.dir/src/support.cpp.o CMakeFiles/_CuraEngine.dir/src/timeEstimate.cpp.o CMakeFiles/_CuraEngine.dir/src/TopSurface.cpp.o CMakeFiles/_CuraEngine.dir/src/TreeSupport.cpp.o CMakeFiles/_CuraEngine.dir/src/WallsComputation.cpp.o CMakeFiles/_CuraEngine.dir/src/wallOverlap.cpp.o CMakeFiles/_CuraEngine.dir/src/Weaver.cpp.o CMakeFiles/_CuraEngine.dir/src/Wireframe2gcode.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunication.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunicationPrivate.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/CommandLine.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/Listener.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/ImageBasedDensityProvider.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/NoZigZagConnectorProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/ZigzagConnectorProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFill.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFillProvider.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfill.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfillPathGenerator.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SubDivCube.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/GyroidInfill.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/Comb.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/GCodePath.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/LinePolygonsCrossings.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/NozzleTempInsert.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/TimeMaterialEstimates.cpp.o CMakeFiles/_CuraEngine.dir/src/progress/Progress.cpp.o CMakeFiles/_CuraEngine.dir/src/progress/ProgressStageEstimator.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/AdaptiveLayerHeights.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/FlowTempGraph.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/PathConfigStorage.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/Settings.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/AABB.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/AABB3D.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/Date.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/gettime.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/getpath.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/LinearAlg2D.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/ListPolyIt.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/logoutput.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/MinimumSpanningTree.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/Point3.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonConnector.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonsPointIndex.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonProximityLinker.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/polygonUtils.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/polygon.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/ProximityPointLink.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/SVG.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o | D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so || D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so stb
+build D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so: CXX_SHARED_LIBRARY_LINKER___CuraEngine CMakeFiles/_CuraEngine.dir/src/Application.cpp.o CMakeFiles/_CuraEngine.dir/src/bridge.cpp.o CMakeFiles/_CuraEngine.dir/src/ConicalOverhang.cpp.o CMakeFiles/_CuraEngine.dir/src/ExtruderTrain.cpp.o CMakeFiles/_CuraEngine.dir/src/FffGcodeWriter.cpp.o CMakeFiles/_CuraEngine.dir/src/FffPolygonGenerator.cpp.o CMakeFiles/_CuraEngine.dir/src/FffProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/gcodeExport.cpp.o CMakeFiles/_CuraEngine.dir/src/GCodePathConfig.cpp.o CMakeFiles/_CuraEngine.dir/src/infill.cpp.o CMakeFiles/_CuraEngine.dir/src/InsetOrderOptimizer.cpp.o CMakeFiles/_CuraEngine.dir/src/layerPart.cpp.o CMakeFiles/_CuraEngine.dir/src/LayerPlan.cpp.o CMakeFiles/_CuraEngine.dir/src/LayerPlanBuffer.cpp.o CMakeFiles/_CuraEngine.dir/src/MergeInfillLines.cpp.o CMakeFiles/_CuraEngine.dir/src/mesh.cpp.o CMakeFiles/_CuraEngine.dir/src/MeshGroup.cpp.o CMakeFiles/_CuraEngine.dir/src/Mold.cpp.o CMakeFiles/_CuraEngine.dir/src/multiVolumes.cpp.o CMakeFiles/_CuraEngine.dir/src/pathOrderOptimizer.cpp.o CMakeFiles/_CuraEngine.dir/src/Preheat.cpp.o CMakeFiles/_CuraEngine.dir/src/PrimeTower.cpp.o CMakeFiles/_CuraEngine.dir/src/raft.cpp.o CMakeFiles/_CuraEngine.dir/src/Scene.cpp.o CMakeFiles/_CuraEngine.dir/src/skin.cpp.o CMakeFiles/_CuraEngine.dir/src/SkirtBrim.cpp.o CMakeFiles/_CuraEngine.dir/src/SupportInfillPart.cpp.o CMakeFiles/_CuraEngine.dir/src/Slice.cpp.o CMakeFiles/_CuraEngine.dir/src/sliceDataStorage.cpp.o CMakeFiles/_CuraEngine.dir/src/slicer.cpp.o CMakeFiles/_CuraEngine.dir/src/support.cpp.o CMakeFiles/_CuraEngine.dir/src/timeEstimate.cpp.o CMakeFiles/_CuraEngine.dir/src/TopSurface.cpp.o CMakeFiles/_CuraEngine.dir/src/TreeSupport.cpp.o CMakeFiles/_CuraEngine.dir/src/WallsComputation.cpp.o CMakeFiles/_CuraEngine.dir/src/wallOverlap.cpp.o CMakeFiles/_CuraEngine.dir/src/Weaver.cpp.o CMakeFiles/_CuraEngine.dir/src/Wireframe2gcode.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunication.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/ArcusCommunicationPrivate.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/CommandLine.cpp.o CMakeFiles/_CuraEngine.dir/src/communication/Listener.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/ImageBasedDensityProvider.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/NoZigZagConnectorProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/ZigzagConnectorProcessor.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFill.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SierpinskiFillProvider.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfill.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SpaghettiInfillPathGenerator.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/SubDivCube.cpp.o CMakeFiles/_CuraEngine.dir/src/infill/GyroidInfill.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/Comb.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/GCodePath.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/LinePolygonsCrossings.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/NozzleTempInsert.cpp.o CMakeFiles/_CuraEngine.dir/src/pathPlanning/TimeMaterialEstimates.cpp.o CMakeFiles/_CuraEngine.dir/src/progress/Progress.cpp.o CMakeFiles/_CuraEngine.dir/src/progress/ProgressStageEstimator.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/AdaptiveLayerHeights.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/FlowTempGraph.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/PathConfigStorage.cpp.o CMakeFiles/_CuraEngine.dir/src/settings/Settings.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/AABB.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/AABB3D.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/Date.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/gettime.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/getpath.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/LinearAlg2D.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/ListPolyIt.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/logoutput.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/MinimumSpanningTree.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/Point3.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonConnector.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonsPointIndex.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/PolygonProximityLinker.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/polygonUtils.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/polygon.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/ProximityPointLink.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/SVG.cpp.o CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o | D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so || D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so stb
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = D:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so -lstdc++ -llog -latomic -lm
+  LINK_LIBRARIES = D:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so -lstdc++ -llog -latomic -lm
   OBJECT_DIR = CMakeFiles\_CuraEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   SONAME = lib_CuraEngine.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\lib_CuraEngine.so
+  TARGET_FILE = D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\lib_CuraEngine.so
   TARGET_PDB = _CuraEngine.so.dbg
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target native-lib
@@ -672,11 +672,11 @@ build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/ar
 # Order-only phony target for native-lib
 
 build cmake_object_order_depends_target_native-lib: phony || cmake_object_order_depends_target__CuraEngine cmake_object_order_depends_target_clipper
-build CMakeFiles/native-lib.dir/native-lib.cpp.o: CXX_COMPILER__native-lib D$:/androidproject/3DPrinting10/app/src/main/cpp/native-lib.cpp || cmake_object_order_depends_target_native-lib
+build CMakeFiles/native-lib.dir/native-lib.cpp.o: CXX_COMPILER__native-lib D$:/3DPrinting10/app/src/main/cpp/native-lib.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -DASSERT_INSANE_OUTPUT -DDEBUG -DUSE_CPU_TIME -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\native-lib.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11
-  INCLUDES = -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper
+  INCLUDES = -Istb-prefix/src -I. -ID:/3DPrinting10/app/src/main/cpp/libs -ID:/3DPrinting10/app/src/main/cpp/libs/clipper
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir
 
@@ -685,25 +685,25 @@ build CMakeFiles/native-lib.dir/native-lib.cpp.o: CXX_COMPILER__native-lib D$:/a
 
 
 #############################################
-# Link the shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so
+# Link the shared library D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so
 
-build D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/native-lib.cpp.o | D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so || D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
+build D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/native-lib.cpp.o | D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/16/liblog.so || D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -g -Wextra -O0 -g -fno-omit-frame-pointer -Wall -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = D:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so -llog D:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so -lstdc++ -llog -latomic -lm
+  LINK_LIBRARIES = D:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so -llog D:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so -lstdc++ -llog -latomic -lm
   OBJECT_DIR = CMakeFiles\native-lib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   SONAME = libnative-lib.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so
+  TARGET_FILE = D:\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so
   TARGET_PDB = native-lib.so.dbg
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HD:\androidproject\3DPrinting10\app\src\main\cpp -BD:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HD:\3DPrinting10\app\src\main\cpp -BD:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -718,7 +718,7 @@ build CMakeFiles/stb: phony CMakeFiles/stb-complete
 # Custom command for CMakeFiles\stb-complete
 
 build CMakeFiles/stb-complete stb-prefix/src/stb-stamp/stb-done: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-install stb-prefix/src/stb-stamp/stb-mkdir stb-prefix/src/stb-stamp/stb-download stb-prefix/src/stb-stamp/stb-patch stb-prefix/src/stb-stamp/stb-configure stb-prefix/src/stb-stamp/stb-build stb-prefix/src/stb-stamp/stb-install
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/stb-complete && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-done"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/stb-complete && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-done"
   DESC = Completed 'stb'
   restat = 1
 
@@ -726,7 +726,7 @@ build CMakeFiles/stb-complete stb-prefix/src/stb-stamp/stb-done: CUSTOM_COMMAND 
 # Custom command for stb-prefix\src\stb-stamp\stb-install
 
 build stb-prefix/src/stb-stamp/stb-install: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-build
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-install"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-install"
   DESC = No install step for 'stb'
   restat = 1
 
@@ -734,7 +734,7 @@ build stb-prefix/src/stb-stamp/stb-install: CUSTOM_COMMAND stb-prefix/src/stb-st
 # Custom command for stb-prefix\src\stb-stamp\stb-mkdir
 
 build stb-prefix/src/stb-stamp/stb-mkdir: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/tmp && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-mkdir"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/tmp && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E make_directory D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-mkdir"
   DESC = Creating directories for 'stb'
   restat = 1
 
@@ -742,7 +742,7 @@ build stb-prefix/src/stb-stamp/stb-mkdir: CUSTOM_COMMAND
 # Custom command for stb-prefix\src\stb-stamp\stb-download
 
 build stb-prefix/src/stb-stamp/stb-download: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-gitinfo.txt stb-prefix/src/stb-stamp/stb-mkdir
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -P D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/tmp/stb-gitclone.cmake && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-download"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -P D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/tmp/stb-gitclone.cmake && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-download"
   DESC = Performing download step (git clone) for 'stb'
   restat = 1
 
@@ -750,7 +750,7 @@ build stb-prefix/src/stb-stamp/stb-download: CUSTOM_COMMAND stb-prefix/src/stb-s
 # Custom command for stb-prefix\src\stb-stamp\stb-patch
 
 build stb-prefix/src/stb-stamp/stb-patch: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-download
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-patch"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-patch"
   DESC = No patch step for 'stb'
   restat = 1
 
@@ -758,7 +758,7 @@ build stb-prefix/src/stb-stamp/stb-patch: CUSTOM_COMMAND stb-prefix/src/stb-stam
 # Custom command for stb-prefix\src\stb-stamp\stb-configure
 
 build stb-prefix/src/stb-stamp/stb-configure: CUSTOM_COMMAND stb-prefix/tmp/stb-cfgcmd.txt stb-prefix/src/stb-stamp/stb-skip-update stb-prefix/src/stb-stamp/stb-patch
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-configure"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-configure"
   DESC = No configure step for 'stb'
   restat = 1
 
@@ -766,7 +766,7 @@ build stb-prefix/src/stb-stamp/stb-configure: CUSTOM_COMMAND stb-prefix/tmp/stb-
 # Custom command for stb-prefix\src\stb-stamp\stb-build
 
 build stb-prefix/src/stb-stamp/stb-build: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-configure
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-build"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb-build && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E touch D:/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src/stb-stamp/stb-build"
   DESC = No build step for 'stb'
   restat = 1
 
@@ -774,17 +774,17 @@ build stb-prefix/src/stb-stamp/stb-build: CUSTOM_COMMAND stb-prefix/src/stb-stam
 # Custom command for stb-prefix\src\stb-stamp\stb-skip-update
 
 build stb-prefix/src/stb-stamp/stb-skip-update: CUSTOM_COMMAND stb-prefix/src/stb-stamp/stb-download
-  COMMAND = cmd.exe /C "cd /D D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append"
+  COMMAND = cmd.exe /C "cd /D D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\armeabi-v7a\stb-prefix\src\stb && D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo_append"
   DESC = Skipping update step for 'stb'
 # =============================================================================
 # Target aliases.
 
-build _CuraEngine: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so
-build clipper: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
-build lib_CuraEngine.so: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so
-build libclipper.so: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
-build libnative-lib.so: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
-build native-lib: phony D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
+build _CuraEngine: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so
+build clipper: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
+build lib_CuraEngine.so: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so
+build libclipper.so: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so
+build libnative-lib.so: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
+build native-lib: phony D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
 # =============================================================================
 # Folder targets.
 
@@ -796,7 +796,7 @@ build native-lib: phony D$:/androidproject/3DPrinting10/app/build/intermediates/
 #############################################
 # The main all target.
 
-build all: phony stb D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/androidproject/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
+build all: phony stb D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libclipper.so D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/lib_CuraEngine.so D$:/3DPrinting10/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
 
 #############################################
 # Make the all target the default.
@@ -806,13 +806,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake D$:/androidproject/3DPrinting10/app/src/main/cpp/CMakeLists.txt D$:/androidproject/3DPrinting10/app/src/main/cpp/cmake/FindStb.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/ExternalProject.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindGit.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPkgConfig.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/GNUInstallDirs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/RepositoryInfo.txt.in D$:/sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake D$:/sdk/ndk/21.0.6113669/build/cmake/platforms.cmake stb-prefix/tmp/stb-cfgcmd.txt.in
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx D$:/3DPrinting10/app/src/main/cpp/CMakeLists.txt D$:/3DPrinting10/app/src/main/cpp/cmake/FindStb.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/ExternalProject.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindGit.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPkgConfig.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/GNUInstallDirs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/RepositoryInfo.txt.in D$:/sdk/ndk-bundle/build/cmake/android.toolchain.cmake D$:/sdk/ndk-bundle/build/cmake/platforms.cmake stb-prefix/tmp/stb-cfgcmd.txt.in
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake D$:/androidproject/3DPrinting10/app/src/main/cpp/CMakeLists.txt D$:/androidproject/3DPrinting10/app/src/main/cpp/cmake/FindStb.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/ExternalProject.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindGit.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPkgConfig.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/GNUInstallDirs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/RepositoryInfo.txt.in D$:/sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake D$:/sdk/ndk/21.0.6113669/build/cmake/platforms.cmake stb-prefix/tmp/stb-cfgcmd.txt.in: phony
+build CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx D$:/3DPrinting10/app/src/main/cpp/CMakeLists.txt D$:/3DPrinting10/app/src/main/cpp/cmake/FindStb.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/ExternalProject.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindGit.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPkgConfig.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/GNUInstallDirs.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake D$:/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/RepositoryInfo.txt.in D$:/sdk/ndk-bundle/build/cmake/android.toolchain.cmake D$:/sdk/ndk-bundle/build/cmake/platforms.cmake stb-prefix/tmp/stb-cfgcmd.txt.in: phony
 
 #############################################
 # Clean all the built files.

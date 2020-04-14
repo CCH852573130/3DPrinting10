@@ -1,31 +1,31 @@
 {
   "buildFiles": [
-    "D:\\sdk\\ndk\\21.0.6113669\\build\\cmake\\platforms.cmake",
-    "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
-    "D:\\sdk\\ndk\\21.0.6113669\\build\\cmake\\android.toolchain.cmake",
-    "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\CMakeLists.txt"
+    "D:\\sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "D:\\sdk\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "D:\\3DPrinting10\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
+    "D:\\3DPrinting10\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clean"
+    "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clean"
   ],
   "libraries": {
     "clipper-Debug-x86_64": {
       "artifactName": "clipper",
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clipper",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clipper",
       "abi": "x86_64",
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libclipper.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libclipper.so"
     },
     "native-lib-Debug-x86_64": {
       "artifactName": "native-lib",
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target native-lib",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target native-lib",
       "abi": "x86_64",
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libnative-lib.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libnative-lib.so"
     },
     "_CuraEngine-Debug-x86_64": {
       "artifactName": "_CuraEngine",
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target _CuraEngine",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target _CuraEngine",
       "abi": "x86_64",
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\lib_CuraEngine.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\lib_CuraEngine.so"
     }
   }
 }

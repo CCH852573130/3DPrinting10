@@ -9,44 +9,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="71dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WiFi设置"
-            android:textSize="30dp"></TextView>
-
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="255dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="WiFi名称" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="WiFi密码" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="连接" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="77dp"
         android:orientation="horizontal">
 

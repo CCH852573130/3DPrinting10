@@ -13,8 +13,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import utils.SerialPortUtils;
+
 //主界面跳转到四个分界面
 public class ZhuJieMian extends AppCompatActivity implements View.OnClickListener {
+  public static SerialPortUtils open;
+  public static int connect_status;
   private static final String FILE_NAME[] = {
           "box.STL",
           "fdmextruder.def.json",
@@ -26,6 +30,15 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
     setContentView(R.layout.activity_zhujiemian);
     //初始化方法
     initUI();
+    connect_status = serialconnect();
+  }
+  public int serialconnect() {
+    open = SerialPortUtils.getInstance();
+    open.setSCMDataReceiveListener(new utils.SCMDataReceiveListener() {
+      public void dataRecevie(byte[] buffer, int size) {
+      }
+    });
+    return open.openSerialPort();
   }
   private void initUI(){
     findViewById(R.id.button1).setOnClickListener(this);
