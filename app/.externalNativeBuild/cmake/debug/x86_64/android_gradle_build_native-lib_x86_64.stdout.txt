@@ -1,6 +1,5 @@
-[1/6] Skipping update step for 'stb'
-[2/6] No configure step for 'stb'
-[3/6] No build step for 'stb'
-[4/6] No install step for 'stb'
-[5/6] Completed 'stb'
-[6/6] Linking CXX shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\x86_64\libnative-lib.so
+[1/5] Skipping update step for 'stb'
+[2/5] No configure step for 'stb'
+[3/5] No build step for 'stb'
+[4/5] No install step for 'stb'
+[5/5] Completed 'stb'
