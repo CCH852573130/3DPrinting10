@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb-complete.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-install.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-mkdir.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-download.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-patch.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-configure.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-build.rule"
+		},
+		{
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"stb"
+		],
+		"name" : "stb"
+	}
+}

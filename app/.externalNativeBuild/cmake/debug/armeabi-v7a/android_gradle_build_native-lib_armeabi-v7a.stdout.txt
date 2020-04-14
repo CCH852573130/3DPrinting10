@@ -1,0 +1,46 @@
+[0/1] Re-running CMake...
+-- Building Stb from source.
+-- Created Stb installation at: D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a/stb-prefix/src
+-- Building debug release of CuraEngine.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/debug/armeabi-v7a
+[1/11] Creating directories for 'stb'
+[2/11] Performing download step (git clone) for 'stb'
+Cloning into 'stb'...
+fatal: early EOF
+fatal: the remote end hung up unexpectedly
+fatal: index-pack failed
+error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+Cloning into 'stb'...
+Checking out files:  45% (185/405)   Checking out files:  46% (187/405)   Checking out files:  47% (191/405)   Checking out files:  48% (195/405)   Checking out files:  49% (199/405)   Checking out files:  50% (203/405)   Checking out files:  51% (207/405)   Checking out files:  52% (211/405)   Checking out files:  53% (215/405)   Checking out files:  54% (219/405)   Checking out files:  55% (223/405)   Checking out files:  56% (227/405)   Checking out files:  57% (231/405)   Checking out files:  58% (235/405)   Checking out files:  59% (239/405)   Checking out files:  60% (243/405)   Checking out files:  61% (248/405)   Checking out files:  62% (252/405)   Checking out files:  63% (256/405)   Checking out files:  64% (260/405)   Checking out files:  65% (264/405)   Checking out files:  66% (268/405)   Checking out files:  67% (272/405)   Checking out files:  68% (276/405)   Checking out files:  69% (280/405)   Checking out files:  70% (284/405)   Checking out files:  71% (288/405)   Checking out files:  72% (292/405)   Checking out files:  73% (296/405)   Checking out files:  74% (300/405)   Checking out files:  75% (304/405)   Checking out files:  76% (308/405)   Checking out files:  77% (312/405)   Checking out files:  78% (316/405)   Checking out files:  79% (320/405)   Checking out files:  80% (324/405)   Checking out files:  81% (329/405)   Checking out files:  82% (333/405)   Checking out files:  83% (337/405)   Checking out files:  84% (341/405)   Checking out files:  85% (345/405)   Checking out files:  86% (349/405)   Checking out files:  87% (353/405)   Checking out files:  88% (357/405)   Checking out files:  89% (361/405)   Checking out files:  90% (365/405)   Checking out files:  91% (369/405)   Checking out files:  92% (373/405)   Checking out files:  93% (377/405)   Checking out files:  94% (381/405)   Checking out files:  95% (385/405)   Checking out files:  96% (389/405)   Checking out files:  97% (393/405)   Checking out files:  98% (397/405)   Checking out files:  99% (401/405)   Checking out files: 100% (405/405)   Checking out files: 100% (405/405), done.
+-- Had to git clone more than once:
+          2 times.
+Note: checking out 'd5d052c806eee2ca1f858cb58b2f062d9fa25b90'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at d5d052c casting to int to remove ptrdiff_t <-> int comparison warnings
+[3/11] Skipping update step for 'stb'
+[4/11] No patch step for 'stb'
+[5/11] No configure step for 'stb'
+[6/11] No build step for 'stb'
+[7/11] No install step for 'stb'
+[8/11] Completed 'stb'
+[9/11] Building CXX object CMakeFiles/_CuraEngine.dir/src/infill/ImageBasedDensityProvider.cpp.o
+D:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/ImageBasedDensityProvider.cpp:16:23: warning: unused variable 'diagonal' [-Wunused-const-variable]
+static constexpr bool diagonal = true;
+                      ^
+D:/androidproject/3DPrinting10/app/src/main/cpp/src/infill/ImageBasedDensityProvider.cpp:17:23: warning: unused variable 'straight' [-Wunused-const-variable]
+static constexpr bool straight = false;
+                      ^
+2 warnings generated.
+[10/11] Linking CXX shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\lib_CuraEngine.so
+[11/11] Linking CXX shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libnative-lib.so

@@ -1,0 +1,5 @@
+[1/5] Skipping update step for 'stb'
+[2/5] No configure step for 'stb'
+[3/5] No build step for 'stb'
+[4/5] No install step for 'stb'
+[5/5] Completed 'stb'
