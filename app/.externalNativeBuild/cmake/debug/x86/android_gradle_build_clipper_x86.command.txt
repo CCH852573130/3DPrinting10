@@ -1,7 +1,7 @@
 Executable : D:\sdk\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
 --build
-D:\3DPrinting10\app\.externalNativeBuild\cmake\debug\x86
+D:\androidproject\3DPrinting10\app\.externalNativeBuild\cmake\debug\x86
 --target
 clipper
 jvmArgs : 

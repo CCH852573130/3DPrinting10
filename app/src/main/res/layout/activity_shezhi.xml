@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".SheZhi"
     android:orientation="vertical">
 
@@ -40,44 +41,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="喷头直径"
-            android:textSize="30dp"></TextView>
+            android:text="喷头直径(mm)"
+            android:textSize="25dp"></TextView>
 
-        <EditText
-            android:id="@+id/editText3"
+
+
+        <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="1mm" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确定"></Button>
+            android:entries="@array/nozzle"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="打印温度"
-            android:textSize="30dp"></TextView>
+            android:text="打印温度(℃)"
+            android:textSize="25dp"></TextView>
 
-        <EditText
-            android:id="@+id/editText4"
+        <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="36℃" />
+            android:entries="@array/temperature"
+            />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确定"></Button>
     </LinearLayout>
 
     <LinearLayout
@@ -88,43 +76,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="    层高    "
-            android:textSize="30dp"></TextView>
-
-        <EditText
-            android:id="@+id/editText5"
+            android:text="层高（mm)"
+            android:textSize="25dp"></TextView>
+        <Spinner
+            android:id="@+id/spinner3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="0.7mm" />
+            android:entries="@array/height"
+            />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确定"></Button>
 
         <TextView
+            android:paddingLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="打印速度"
-            android:textSize="30dp"></TextView>
+            android:text="打印速度(mm/s)"
+            android:textSize="25dp"></TextView>
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/speed"
 
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="15mm/s" />
+            />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确定"></Button>
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"></Button>
 </LinearLayout>
