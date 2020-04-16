@@ -25,7 +25,7 @@ import java.util.List;
 
 //显示在本地sd卡上储存在某个目录下的图片，每个图片有自己的复选框，选中之后点打印按钮 打印按钮含读取与图片对应的gcode文件功能
 
-public class MoXingKu extends AppCompatActivity implements View.OnClickListener {
+public class MoXingKu extends AppCompatActivity  {
     private GridView mGv;
 
     private static final String FILE_NAME[] = {
@@ -33,7 +33,7 @@ public class MoXingKu extends AppCompatActivity implements View.OnClickListener 
             "c.png", "d.png",
             "e.png", "p2.png",
     };
-    public static List<String> imagePath=new ArrayList<String>();//图片文件的路径
+    private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
     /*
      * 方法:判断是否为图片文件
@@ -64,6 +64,13 @@ public class MoXingKu extends AppCompatActivity implements View.OnClickListener 
                     if(isImageFile(f.getPath())){//如果是图片文件
                         imagePath.add(f.getPath());//将文件的路径添加到List集合中
                     }
+                }
+            }
+            for (int i = 0;i<imagePath.size();i++){
+                int j = imagePath.lastIndexOf( imagePath.get(i) );
+                if (i != j){
+                    imagePath.remove( j );
+                    i--;
                 }
             }
         } catch (Exception e) {
@@ -117,7 +124,7 @@ public class MoXingKu extends AppCompatActivity implements View.OnClickListener 
                     holder = (ViewHolder) view.getTag();
                 }
                 //赋值
-                String fName = FILE_NAME[position].trim();
+                String fName = imagePath.get(position).trim();
                 String fileName = fName.substring(fName.lastIndexOf("/")+1);
                 holder.textView.setText( fileName );
                 //为ImageView设置要显示的图片
@@ -133,7 +140,7 @@ public class MoXingKu extends AppCompatActivity implements View.OnClickListener 
 
     private void initUI() {
 
-        findViewById(R.id.btn1).setOnClickListener(this);
+
         //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
         File testFolder = new File( Environment.getExternalStorageDirectory() + "/picture");
         if(testFolder.exists() && testFolder.isDirectory() ) {
@@ -152,21 +159,21 @@ public class MoXingKu extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-//            case R.id.imageView2:
-//                Intent intent7 = new Intent();
-//                intent7.setClass(getApplicationContext(), DaYinJieMian.class);
-//                startActivity(intent7);
+//    @Override
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+////            case R.id.imageView2:
+////                Intent intent7 = new Intent();
+////                intent7.setClass(getApplicationContext(), DaYinJieMian.class);
+////                startActivity(intent7);
+////                break;
+//            case R.id.btn1:
+//                Intent intent8 = new Intent();
+//                intent8.setClass(getApplicationContext(), UPicture.class);
+//                startActivity(intent8);
 //                break;
-            case R.id.btn1:
-                Intent intent8 = new Intent();
-                intent8.setClass(getApplicationContext(), UPicture.class);
-                startActivity(intent8);
-                break;
-        }
-    }
+//        }
+//    }
     private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
         new Thread(new Runnable() {
             @Override
