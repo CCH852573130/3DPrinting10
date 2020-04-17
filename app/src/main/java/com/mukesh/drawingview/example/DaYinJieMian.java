@@ -2,6 +2,7 @@ package com.mukesh.drawingview.example;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.io.ByteArrayOutputStream;
@@ -13,7 +14,7 @@ import static com.mukesh.drawingview.example.ZhuJieMian.open;
 //开始打印 将gcode文件传给打印机
 
 public class DaYinJieMian extends AppCompatActivity {
-    public String File_Path;
+    public static String File_Path;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,6 @@ public class DaYinJieMian extends AppCompatActivity {
         super.onStart();
     }
     public void send_Mesg(View v) {
-        File_Path = "";
         File file = new File(File_Path);
         if (file.canRead()){
             try{
@@ -41,6 +41,7 @@ public class DaYinJieMian extends AppCompatActivity {
                 String str = "M24";
                 byte[] bty1 = str.getBytes();
                 open.sendDataToSerialPort(bty1);
+                Log.d("Test", "开始打印");
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -50,10 +51,12 @@ public class DaYinJieMian extends AppCompatActivity {
         String str1 = "M25";
         byte[] bty2 =str1.getBytes();
         open.sendDataToSerialPort(bty2);
+        Log.d("Test", "暂停打印" + str1);
     }
     public void send_M112(View view){
         String str2 = "M112";
         byte[] bty3 =str2.getBytes();
         open.sendDataToSerialPort(bty3);
+        Log.d("Test", "停止打印" + str2);
     }
 }

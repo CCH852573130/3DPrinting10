@@ -45,6 +45,7 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
     findViewById(R.id.button2).setOnClickListener(this);
     findViewById(R.id.button3).setOnClickListener(this);
     findViewById(R.id.button4).setOnClickListener(this);
+    findViewById(R.id.button5).setOnClickListener(this);
     //将asserts文件夹下的文件加载至SD卡中（路径可以按你们需要改）
     File testFolder = new File( Environment.getExternalStorageDirectory() + "/test");
     if(testFolder.exists() && testFolder.isDirectory() ) {
@@ -111,6 +112,11 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
         Intent intent4 = new Intent();
         intent4.setClass(getApplicationContext(), SheZhi.class);
         startActivity(intent4);
+        break;
+      case R.id.button5:
+        Intent intent5 = new Intent();
+        intent5.setClass(getApplicationContext(), UPicture.class);
+        startActivity(intent5);
         break;
     }
   }

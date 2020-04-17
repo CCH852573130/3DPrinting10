@@ -24,6 +24,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import static com.mukesh.drawingview.example.ZhuJieMian.open;
+
 //机器设置以及切片设置（温度去除） WiFi去除
 
 public class SheZhi extends AppCompatActivity {
@@ -169,5 +171,14 @@ private String nozzle_save,temperature_save,height_save,speed_save;
         } else {
             Log.d("bbb", "requestMyPermissions: 有读SD权限");
         }
+    }
+    public void send_command(View v){
+        String stroftempofbackbed = "M140 S55";
+        String stroftempofextruder = "M105 S60";
+        byte[] bytoftempofbackbed = stroftempofbackbed.getBytes();
+        byte[] bytoftempofextruder = stroftempofextruder.getBytes();
+        open.sendDataToSerialPort(bytoftempofbackbed);
+        open.sendDataToSerialPort(bytoftempofextruder);
+        Log.d("test", "一键预热成功");
     }
 }
