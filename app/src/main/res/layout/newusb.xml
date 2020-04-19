@@ -16,22 +16,14 @@
             android:id="@+id/headtext"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
-        <RadioGroup
-            android:id="@+id/radioBtn"
-            android:orientation="horizontal"
+        <CheckBox
+            android:id="@+id/cb"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:text="选择"
-                    android:id="@+id/radio1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
-                android:text="不选"
-                android:checked="true"
-                android:id="@+id/radio2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RadioGroup>
+            android:layout_height="50dp"
+            android:checked="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="260dp"
+            />
     </LinearLayout>
 </LinearLayout>

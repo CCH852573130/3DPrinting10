@@ -12,6 +12,13 @@
         android:onClick="slice"
         android:text="切片" />
 
+    <TextView
+        android:id="@+id/tvselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="已选择了：" />
+
     <Button
         android:id="@+id/btn_printing"
         android:layout_width="314dp"

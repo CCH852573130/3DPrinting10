@@ -7,7 +7,7 @@ import java.io.IOException;
 public class USBDiskState {
     private static final String MOUNTS_FILE = "/proc/mounts";
 
-    private static String path = "/mnt/usbhost1";
+    private static String path = "/storage/usbhost1";
 
     public static boolean isMounted() {
 
