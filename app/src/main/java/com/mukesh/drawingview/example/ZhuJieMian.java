@@ -120,4 +120,13 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
         break;
     }
   }
+  public void send_command(View v){
+    String stroftempofbackbed = "M140 S55";
+    String stroftempofextruder = "M105 S60";
+    byte[] bytoftempofbackbed = stroftempofbackbed.getBytes();
+    byte[] bytoftempofextruder = stroftempofextruder.getBytes();
+    open.sendDataToSerialPort(bytoftempofbackbed);
+    open.sendDataToSerialPort(bytoftempofextruder);
+    Log.d("test", "一键预热成功");
+  }
 }

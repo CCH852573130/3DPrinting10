@@ -172,13 +172,4 @@ private String nozzle_save,temperature_save,height_save,speed_save;
             Log.d("bbb", "requestMyPermissions: 有读SD权限");
         }
     }
-    public void send_command(View v){
-        String stroftempofbackbed = "M140 S55";
-        String stroftempofextruder = "M105 S60";
-        byte[] bytoftempofbackbed = stroftempofbackbed.getBytes();
-        byte[] bytoftempofextruder = stroftempofextruder.getBytes();
-        open.sendDataToSerialPort(bytoftempofbackbed);
-        open.sendDataToSerialPort(bytoftempofextruder);
-        Log.d("test", "一键预热成功");
-    }
 }

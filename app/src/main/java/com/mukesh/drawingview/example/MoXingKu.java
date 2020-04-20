@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -23,10 +24,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.mukesh.drawingview.example.DaYinJieMian.File_Path;
+
 //显示在本地sd卡上储存在某个目录下的图片，每个图片有自己的复选框，选中之后点打印按钮 打印按钮含读取与图片对应的gcode文件功能
 
 public class MoXingKu extends AppCompatActivity  {
     private GridView mGv;
+    public String File_Path_1;
 
     private static final String FILE_NAME[] = {
             "a.png", "b.png",
@@ -89,6 +93,21 @@ public class MoXingKu extends AppCompatActivity  {
             return;
         }
         mGv = (GridView) findViewById( R.id.gv );
+//girdview事件监听
+//蔚晟楠编写
+//函数作用：点击item后进行跳转或发送代码，imagepath为龚雨晨写的文件路径
+        mGv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                abc(i);
+                Intent intent9 = new Intent();
+                intent9.setClass(getApplicationContext(), DaYinJieMian.class);
+                startActivity(intent9);
+            }
+        });
+
+
+
         mGv.setAdapter( new BaseAdapter() {
             @Override
             public int getCount() {
@@ -135,12 +154,12 @@ public class MoXingKu extends AppCompatActivity  {
             }
         } );
     }
-
-
-
+    public void abc(int i ) {
+    File_Path_1 = imagePath.get(i);
+    File_Path = File_Path_1.substring(0, File_Path_1.lastIndexOf(".")) + ".gcode";
+    Toast.makeText(this,File_Path,Toast.LENGTH_SHORT).show();
+    }
     private void initUI() {
-
-
         //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
         File testFolder = new File( Environment.getExternalStorageDirectory() + "/picture");
         if(testFolder.exists() && testFolder.isDirectory() ) {
