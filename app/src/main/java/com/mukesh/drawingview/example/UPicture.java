@@ -32,7 +32,7 @@ public class UPicture extends AppCompatActivity {
     private CheckBoxAdapter cbAdapter;
     private TextView tvSelected;
     public String path_picture;
-    public String File_Path_slice;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,12 +141,14 @@ public class UPicture extends AppCompatActivity {
         } else if (listStr.size() == 0) {
             Toast.makeText(this, "请选择且只选择一个stl文件", Toast.LENGTH_SHORT).show();
         } else {
-                File_Path_slice = listStr.toString().substring(1,listStr.toString().lastIndexOf("]"));//这里可以获取到文件的路径
-//                sleep(10000);
-            Toast.makeText(this, File_Path_slice, Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "切片成功", Toast.LENGTH_SHORT).show();
+            String File_Path_stl = listStr.toString().substring(1,listStr.toString().lastIndexOf("]"));//这里可以获取到文件的路径
+            String File_Path_gcode = File_Path_stl.substring(0, File_Path_stl.lastIndexOf(".")) + ".gcode";
+            String fileName = File_Path_stl.substring(File_Path_stl.lastIndexOf("/")+1);
+            stringFromJNI3(File_Path_stl,File_Path_gcode);
+            Toast.makeText(this, fileName+"切片成功", Toast.LENGTH_SHORT).show();
         }
     }
+    public native String stringFromJNI3(String stl_path,String gcode_path);
 
     public void printing(View view) {
         Intent intent8 = new Intent();

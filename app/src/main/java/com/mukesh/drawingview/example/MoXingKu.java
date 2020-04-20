@@ -3,9 +3,9 @@ package com.mukesh.drawingview.example;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,18 +24,24 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mukesh.drawingview.example.DaYinJieMian.File_Path;
-
-//显示在本地sd卡上储存在某个目录下的图片，每个图片有自己的复选框，选中之后点打印按钮 打印按钮含读取与图片对应的gcode文件功能
 
 public class MoXingKu extends AppCompatActivity  {
     private GridView mGv;
-    public String File_Path_1;
+    static {
+        System.loadLibrary("native-lib");
+    }
 
     private static final String FILE_NAME[] = {
             "a.png", "b.png",
             "c.png", "d.png",
             "e.png", "p2.png",
+    };
+    private static final String stl_NAME[] = {
+            "a.STL", "b.STL",
+            "c.STL", "d.STL",
+            "e.STL", "p2.STL",
+
+
     };
     private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
@@ -93,21 +99,6 @@ public class MoXingKu extends AppCompatActivity  {
             return;
         }
         mGv = (GridView) findViewById( R.id.gv );
-//girdview事件监听
-//蔚晟楠编写
-//函数作用：点击item后进行跳转或发送代码，imagepath为龚雨晨写的文件路径
-        mGv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                abc(i);
-                Intent intent9 = new Intent();
-                intent9.setClass(getApplicationContext(), DaYinJieMian.class);
-                startActivity(intent9);
-            }
-        });
-
-
-
         mGv.setAdapter( new BaseAdapter() {
             @Override
             public int getCount() {
@@ -153,46 +144,71 @@ public class MoXingKu extends AppCompatActivity  {
                 return view;
             }
         } );
+        mGv.setOnItemClickListener( new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                String fPath = imagePath.get(position).trim();
+                String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
+                String stl_path1 = fPath.replace( "png","STL" );
+                String stl_path2 = stl_path1.replace( "picture","stl_file" );
+                String gcode_path1 = fPath.replace( "png","gcode" );
+                String gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
+                stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
+                Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show();
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), DaYinJieMian.class);
+                startActivity(intent);
+            }
+        } );
     }
-    public void abc(int i ) {
-    File_Path_1 = imagePath.get(i);
-    File_Path = File_Path_1.substring(0, File_Path_1.lastIndexOf(".")) + ".gcode";
-    Toast.makeText(this,File_Path,Toast.LENGTH_SHORT).show();
-    }
+    public native String stringFromJNI2(String stl_path,String gcode_path);
+
+
+
     private void initUI() {
+
+
         //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
         File testFolder = new File( Environment.getExternalStorageDirectory() + "/picture");
         if(testFolder.exists() && testFolder.isDirectory() ) {
-            Toast.makeText( getApplicationContext(),"图片已经存在",Toast.LENGTH_LONG ).show();
-        } else if(!testFolder.exists()) {
-            testFolder.mkdir();
+        Toast.makeText( getApplicationContext(),"图片已经存在",Toast.LENGTH_LONG ).show();
+    } else if(!testFolder.exists()) {
+        testFolder.mkdir();
 // check whether the model files exist in the phone **/
 // if not, copy them to there                       **/
-            for (int n =0; n < FILE_NAME.length; n++) {
-                File modelFile = new File(testFolder, FILE_NAME[n]);
-                if (!modelFile.exists()) {
-                    copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
-                }
+        for (int n =0; n < FILE_NAME.length; n++) {
+            File modelFile = new File(testFolder, FILE_NAME[n]);
+            if (!modelFile.exists()) {
+                copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
             }
-            Toast.makeText( getApplicationContext(),"上传图片成功",Toast.LENGTH_LONG ).show();
         }
+        Toast.makeText( getApplicationContext(),"上传图片成功",Toast.LENGTH_LONG ).show();
     }
 
-//    @Override
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-////            case R.id.imageView2:
-////                Intent intent7 = new Intent();
-////                intent7.setClass(getApplicationContext(), DaYinJieMian.class);
-////                startActivity(intent7);
-////                break;
-//            case R.id.btn1:
-//                Intent intent8 = new Intent();
-//                intent8.setClass(getApplicationContext(), UPicture.class);
-//                startActivity(intent8);
-//                break;
-//        }
-//    }
+        //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
+        File testFolder2 = new File( Environment.getExternalStorageDirectory() + "/stl_file");
+        File testFolder3 = new File( Environment.getExternalStorageDirectory() + "/gcode_file");
+        if(testFolder2.exists() && testFolder2.isDirectory() ) {
+            Toast.makeText( getApplicationContext(),"stl已经存在",Toast.LENGTH_LONG ).show();
+        } else if(!testFolder2.exists()) {
+            testFolder2.mkdir();
+// check whether the model files exist in the phone **/
+// if not, copy them to there                       **/
+            for (int n =0; n < stl_NAME.length; n++) {
+                File modelFile2 = new File(testFolder2, stl_NAME[n]);
+                if (!modelFile2.exists()) {
+                    copyAssetFilesToSDCard(modelFile2, stl_NAME[n]);
+                }
+            }
+            Toast.makeText( getApplicationContext(),"上传stl成功",Toast.LENGTH_LONG ).show();
+        }
+        if(testFolder3.exists() && testFolder3.isDirectory() ) {
+            Toast.makeText( getApplicationContext(),"gcode已经存在",Toast.LENGTH_LONG ).show();
+        } else if(!testFolder3.exists()) {
+            testFolder3.mkdir();}
+}
+
+
     private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
         new Thread(new Runnable() {
             @Override
