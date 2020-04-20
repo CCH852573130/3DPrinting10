@@ -31,7 +31,8 @@ public class UPicture extends AppCompatActivity {
     public List<String> listStr;
     private CheckBoxAdapter cbAdapter;
     private TextView tvSelected;
-    public String path;
+    public String path_picture;
+    public String File_Path_slice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,9 +141,9 @@ public class UPicture extends AppCompatActivity {
         } else if (listStr.size() == 0) {
             Toast.makeText(this, "请选择且只选择一个stl文件", Toast.LENGTH_SHORT).show();
         } else {
-                File_Path = listStr.toString().substring(1,listStr.toString().lastIndexOf("]"));//这里可以获取到文件的路径
+                File_Path_slice = listStr.toString().substring(1,listStr.toString().lastIndexOf("]"));//这里可以获取到文件的路径
 //                sleep(10000);
-            Toast.makeText(this, File_Path, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, File_Path_slice, Toast.LENGTH_SHORT).show();
             Toast.makeText(this, "切片成功", Toast.LENGTH_SHORT).show();
         }
     }
@@ -164,14 +165,14 @@ public class UPicture extends AppCompatActivity {
                 } else {
                     fileName = file.getName();
                     if (fileName.endsWith(".stl") || (fileName.endsWith(".STL"))) {
-                        path = file.getAbsolutePath();
+                        path_picture = file.getAbsolutePath();
                         HashMap<String, Object> map = new HashMap();
 //                        String s = fileName.substring(0, fileName.lastIndexOf(".")).toString();
 //                        Log.i("test", "文件名stl：：  " + s);
 //                        map.put("Name", fileName.substring(0, fileName.lastIndexOf(".")));
                         map.put("Name", fileName);
                         map.put("boolean", false);
-                        map.put("filepath",path);
+                        map.put("filepath",path_picture);
                         myBeanList.add(map);
                     }
                 }
