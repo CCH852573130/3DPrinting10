@@ -146,18 +146,24 @@ public class MoXingKu extends AppCompatActivity  {
         } );
         mGv.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                String fPath = imagePath.get(position).trim();
-                String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
-                String stl_path1 = fPath.replace( "png","STL" );
-                String stl_path2 = stl_path1.replace( "picture","stl_file" );
-                String gcode_path1 = fPath.replace( "png","gcode" );
-                String gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
-                stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
-                Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show();
-                Intent intent = new Intent();
-                intent.setClass(getApplicationContext(), DaYinJieMian.class);
-                startActivity(intent);
+            public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
+                new Thread( new Runnable() {
+                    @Override
+                    public void run() {
+                        String fPath = imagePath.get(position).trim();
+                        String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
+                        String stl_path1 = fPath.replace( "png","STL" );
+                        String stl_path2 = stl_path1.replace( "picture","stl_file" );
+                        String gcode_path1 = fPath.replace( "png","gcode" );
+                        String gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
+                        stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
+//                        Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show();
+                        Intent intent = new Intent();
+                        intent.setClass(getApplicationContext(), DaYinJieMian.class);
+                        startActivity(intent);
+                    }
+                } ).start();
+
             }
         } );
     }

@@ -118,7 +118,7 @@ void ClientSocket::recvAll(void* data, int length)
         }
         if (n < 0)
         {
-            cura::logError("ClientSocket::recvAll error...");
+            logError("ClientSocket::recvAll error...");
             close();
             return;
         }

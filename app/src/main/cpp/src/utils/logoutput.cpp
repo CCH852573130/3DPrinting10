@@ -1,17 +1,20 @@
 /** Copyright (C) 2013 Ultimaker - Released under terms of the AGPLv3 License */
 #include <stdio.h>
 #include <stdarg.h>
+//#ifndef LOGOUTPUT_H
+//#define LOGOUTPUT_H
+//#ifdef _OPENMP
+ //   #include <omp.h>
+//#endif // _OPENMP
 
-#ifdef _OPENMP
-    #include <omp.h>
-#endif // _OPENMP
 #include "logoutput.h"
 
-
-#include "android/log.h"
+//#include "android/log.h"
 #define LOG_TAG "log_debug"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+//#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+//#define logError(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+//#define logDebug(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 
 namespace cura {
 
@@ -26,8 +29,8 @@ void increaseVerboseLevel()
 void enableProgressLogging()
 {
     progressLogging = true;
-}
-
+}}
+/*
 void logError(const char* fmt, ...)
 {
     va_list args;
@@ -123,5 +126,5 @@ void logProgress(const char* type, int value, int maxValue, float percent)
         fflush(stderr);
     }
 }
-
-}//namespace cura
+*/
+//}//namespace cura

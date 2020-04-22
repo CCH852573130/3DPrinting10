@@ -1,5 +1,8 @@
-[1/5] Skipping update step for 'stb'
-[2/5] No configure step for 'stb'
-[3/5] No build step for 'stb'
-[4/5] No install step for 'stb'
-[5/5] Completed 'stb'
+[1/8] Skipping update step for 'stb'
+[2/8] No configure step for 'stb'
+[3/8] No build step for 'stb'
+[4/8] No install step for 'stb'
+[5/8] Completed 'stb'
+[6/8] Building CXX object CMakeFiles/_CuraEngine.dir/src/utils/socket.cpp.o
+[7/8] Building CXX object CMakeFiles/_CuraEngine.dir/src/utils/polygon.cpp.o
+[8/8] Linking CXX shared library D:\androidproject\3DPrinting10\app\build\intermediates\cmake\debug\obj\x86_64\lib_CuraEngine.so

@@ -86,12 +86,12 @@ void Application::connect()
 #endif //ARCUS
 void Application::printCall() const
 {
-    cura::logError("Command called:\n");
+    logError("Command called:\n");
     for (size_t argument_index = 0; argument_index < argc; argument_index++)
     {
-        cura::logError("%s ", argv[argument_index]);
+        logError("%s ", argv[argument_index]);
     }
-    cura::logError("\n");
+    logError("\n");
 }
 void Application::printHelp() const
 {
