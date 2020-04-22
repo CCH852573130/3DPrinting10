@@ -32,6 +32,9 @@ public class UPicture extends AppCompatActivity {
     private CheckBoxAdapter cbAdapter;
     private TextView tvSelected;
     public String path_picture;
+    static {
+        System.loadLibrary("native-lib");
+    }
 
 
     @Override
