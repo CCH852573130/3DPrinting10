@@ -2,6 +2,7 @@ package com.mukesh.drawingview.example;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +16,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +29,7 @@ import java.util.List;
 import usbcontroler.USBDiskState;
 
 import static com.mukesh.drawingview.example.DaYinJieMian.File_Path;
+import static com.mukesh.drawingview.example.ZhuJieMian.open;
 
 //要做读取U盘路径 并实现U盘文件（stl）的显示 选中文件后能点击按钮进行上传 布局界面为activity_upicture
 public class UPicture extends AppCompatActivity {
@@ -145,10 +152,14 @@ public class UPicture extends AppCompatActivity {
             Toast.makeText(this, "请选择且只选择一个stl文件", Toast.LENGTH_SHORT).show();
         } else {
             String File_Path_stl = listStr.toString().substring(1,listStr.toString().lastIndexOf("]"));//这里可以获取到文件的路径
-            String File_Path_gcode = File_Path_stl.substring(0, File_Path_stl.lastIndexOf(".")) + ".gcode";
-            String fileName = File_Path_stl.substring(File_Path_stl.lastIndexOf("/")+1);
-            stringFromJNI3(File_Path_stl,File_Path_gcode);
+            File file = new File(Environment.getExternalStorageDirectory() +"/usbtest.STL");
+            String abc = Environment.getExternalStorageDirectory() +"/usbtest.STL";
+            copy(abc,File_Path_stl);
+            String File_Path_gcode = abc.substring(0, abc.lastIndexOf(".")) + ".gcode";
+            String fileName =abc.substring(abc.lastIndexOf("/")+1);
+            stringFromJNI3(abc,File_Path_gcode);
             Toast.makeText(this, fileName+"切片成功", Toast.LENGTH_SHORT).show();
+            File_Path = File_Path_gcode;
         }
     }
     public native String stringFromJNI3(String stl_path,String gcode_path);
@@ -184,7 +195,26 @@ public class UPicture extends AppCompatActivity {
             }
         }
     }
-}
+    private void copy( String Filepathofcopy,String FileToCopy){
+        try {
+            FileInputStream fis = new FileInputStream(FileToCopy);
+            FileOutputStream fos = new FileOutputStream(Filepathofcopy);
+            byte[] buffer = new byte[8192];
+            int read;
+            try {
+                while ((read = fis.read(buffer)) != -1) {
+                    fos.write(buffer, 0, read);
+                }
+            } finally {
+                fos.flush();
+                fos.close();
+                fis.close();
+            }
+        } catch (IOException e) {
+            Log.d("aaa", "Yushengnan tested");
+        }
+        }
+    }
 /*    private String getFilePathByName(String seekFileName,File rootFile){
         List<File> files=parseFiles(rootFile);
         for (File file:files){

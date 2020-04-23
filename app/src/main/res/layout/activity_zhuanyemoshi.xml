@@ -6,144 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".ZhuanYeMoShi"
     android:padding="10dp">
-        <Button
-            android:id="@+id/B"
-            android:background="@drawable/arrowup"
-            android:layout_marginLeft="200dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="Y+"
 
-            />
-        <Button
-            android:id="@+id/F"
-            android:background="@drawable/arrowup"
-            android:layout_toRightOf="@+id/B"
-            android:layout_marginLeft="300dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="Z+"
+    <Button
+        android:id="@+id/B"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/arrowup"
+        android:onClick="send_Yplus"
+        android:text="Y+"
 
-             />
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/D"
-            android:layout_below="@+id/B"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="60dp"
-            android:background="@drawable/arrowleft"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="X-"
-            />
-        <Button
-            android:id="@+id/E"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="200dp"
-            android:layout_below="@+id/B"
-            android:background="@drawable/circle"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="200dp"
-            android:textSize="20sp"
-            android:text="XY轴归零"/>
-        <Button
-            android:id="@+id/C"
-            android:layout_below="@+id/B"
-            android:layout_toRightOf="@+id/E"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/arrowright"
-            android:textSize="20sp"
-            android:text="X+"
-             />
-        <Button
-            android:id="@+id/H"
-            android:layout_below="@+id/F"
-            android:layout_marginTop="50dp"
-            android:layout_toRightOf="@+id/B"
-            android:layout_marginLeft="300dp"
-            android:background="@drawable/circle"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="Z轴归零"
-             />
-        <Button
-            android:id="@+id/A"
-            android:background="@drawable/arrowdown"
-            android:layout_marginLeft="200dp"
-            android:layout_below="@id/E"
-            android:layout_marginTop="50dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="Y-"
-            />
+    <Button
+        android:id="@+id/F"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="300dp"
+        android:layout_toRightOf="@+id/B"
+        android:background="@drawable/arrowup"
+        android:onClick="send_Zplus"
+        android:text="Z+"
 
-        <Button
-            android:id="@+id/G"
-            android:background="@drawable/arrowdown"
-            android:layout_below="@+id/H"
-            android:layout_marginTop="50dp"
-            android:layout_toRightOf="@+id/B"
-            android:layout_marginLeft="300dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textSize="20sp"
-            android:text="Z-"
-             />
-        <Button
-            android:id="@+id/SIZE1"
-            android:layout_marginLeft="180dp"
-            android:layout_below="@+id/A"
-            android:layout_marginTop="30dp"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:background="@drawable/selector_orange"
-            android:text="0.1"
-             />
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/SIZE2"
-            android:layout_below="@+id/A"
-            android:layout_marginTop="30dp"
-            android:layout_toRightOf="@+id/SIZE1"
-            android:layout_marginLeft="50dp"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:background="@drawable/selector_orange"
-            android:text="1"
-             />
+    <Button
+        android:id="@+id/D"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/B"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/arrowleft"
+        android:onClick="send_Xminus"
+        android:text="X-"
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/SIZE3"
-            android:layout_below="@+id/A"
-            android:layout_marginTop="30dp"
-            android:layout_toRightOf="@+id/SIZE2"
-            android:layout_marginLeft="50dp"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:background="@drawable/selector_orange"
-            android:text="10"
-            />
+    <Button
+        android:id="@+id/E"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/B"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle"
+        android:onClick="send_XYBACK"
+        android:text="XY轴归零"
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/SIZE4"
-            android:layout_below="@+id/A"
-            android:layout_marginTop="30dp"
-            android:layout_toRightOf="@+id/SIZE3"
-            android:layout_marginLeft="50dp"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:background="@drawable/selector_orange"
-            android:text="50"
-            />
+    <Button
+        android:id="@+id/C"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/B"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/E"
+        android:background="@drawable/arrowright"
+        android:onClick="send_Xplus"
+        android:text="X+"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/H"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/F"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/B"
+        android:background="@drawable/circle"
+        android:onClick="send_ZBACK"
+        android:text="Z轴归零"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/A"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/E"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/arrowdown"
+        android:onClick="send_Yminus"
+        android:text="Y-"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/G"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/H"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/B"
+        android:background="@drawable/arrowdown"
+        android:onClick="send_Zminus"
+        android:text="Z-"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/SIZE1"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/A"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_orange"
+        android:onClick="setsize1"
+        android:text="0.1" />
+
+    <Button
+        android:id="@+id/SIZE2"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/A"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/SIZE1"
+        android:background="@drawable/selector_orange"
+        android:onClick="setsize2"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/SIZE3"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/A"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/SIZE2"
+        android:background="@drawable/selector_orange"
+        android:onClick="setsize3"
+        android:text="10" />
+
+    <Button
+        android:id="@+id/SIZE4"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/A"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/SIZE3"
+        android:background="@drawable/selector_orange"
+        android:onClick="setsize4"
+        android:text="50" />
 
     <TextView
         android:id="@+id/temp"
