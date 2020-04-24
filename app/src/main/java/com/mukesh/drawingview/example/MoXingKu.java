@@ -1,6 +1,8 @@
 package com.mukesh.drawingview.example;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -94,6 +96,9 @@ public class MoXingKu extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_moxingku );
+        Log.d( "MoXing","oncreate" );
+        Log.d("MoXing","taskid:"+getTaskId()+"  ,hash:"+hashCode());
+        logtaskName();
         initUI();
         String sdpath = Environment.getExternalStorageDirectory() + "/picture";//获得SD卡中图片的路径
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
@@ -149,9 +154,6 @@ public class MoXingKu extends AppCompatActivity  {
         mGv.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
-                new Thread( new Runnable() {
-                    @Override
-                    public void run() {
                         String fPath = imagePath.get(position).trim();
                         String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
                         String stl_path1 = fPath.replace( "png","STL" );
@@ -164,13 +166,49 @@ public class MoXingKu extends AppCompatActivity  {
                         Intent intent = new Intent();
                         intent.setClass(getApplicationContext(), DaYinJieMian.class);
                         startActivity(intent);
-                    }
-                } ).start();
-
+                        System.exit( 0 );
             }
         } );
+
     }
-    public native String stringFromJNI2(String stl_path,String gcode_path);
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d( "MoXing","onStart" );
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d( "MoXing","onresume" );
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d( "MoXing","onpause" );
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d( "MoXing","onStop" );
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d( "MoXing","onrestart" );
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d( "MoXing","ondestroy" );
+    }
+
+    public native String stringFromJNI2(String stl_path, String gcode_path);
 
 
 
@@ -216,6 +254,14 @@ public class MoXingKu extends AppCompatActivity  {
         } else if(!testFolder3.exists()) {
             testFolder3.mkdir();}
 }
+    private void logtaskName(){
+        try {
+            ActivityInfo info = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
+            Log.d("MoXing",info.taskAffinity);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
     private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
         new Thread(new Runnable() {
             @Override

@@ -279,10 +279,15 @@ std::string GCodeExport::getFileHeader(const std::vector<bool>& extruder_is_used
 void GCodeExport::setLayerNr(unsigned int layer_nr_) {
     layer_nr = layer_nr_;
 }
+#include <android/log.h>
+#define LOG_TAG "System.out.c"
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 
 void GCodeExport::setOutputStream(std::ostream* stream)
 {
     output_stream = stream;
+    LOGI("已输出");
     *output_stream << std::fixed;
 }
 
