@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_slice"
-        android:layout_width="314dp"
-        android:layout_height="47dp"
-        android:layout_weight="0"
-        android:onClick="slice"
-        android:text="切片" />
-
     <TextView
         android:id="@+id/tvselected"
         android:layout_width="wrap_content"

@@ -28,8 +28,6 @@ import java.util.List;
 
 import usbcontroler.USBDiskState;
 
-import static com.mukesh.drawingview.example.DaYinJieMian.File_Path;
-import static com.mukesh.drawingview.example.ZhuJieMian.open;
 
 //要做读取U盘路径 并实现U盘文件（stl）的显示 选中文件后能点击按钮进行上传 布局界面为activity_upicture
 public class UPicture extends AppCompatActivity {
@@ -145,7 +143,7 @@ public class UPicture extends AppCompatActivity {
         }
     }
 
-    public void slice(View view) {
+    public void printing(View view) {
         if (listStr.size() > 1) {
             Toast.makeText(this, "您选择的stl文件过多", Toast.LENGTH_SHORT).show();
         } else if (listStr.size() == 0) {
@@ -159,16 +157,17 @@ public class UPicture extends AppCompatActivity {
             String fileName =abc.substring(abc.lastIndexOf("/")+1);
             stringFromJNI3(abc,File_Path_gcode);
             Toast.makeText(this, fileName+"切片成功", Toast.LENGTH_SHORT).show();
-            File_Path = File_Path_gcode;
+            Intent intent8 = new Intent();
+            intent8.setClass(getApplicationContext(), DaYinJieMian.class);
+            Bundle mBundle = new Bundle();
+            mBundle.putString("Data", File_Path_gcode);//压入数据
+            intent8.putExtras(mBundle);
+            startActivity(intent8);
+            System.exit(0);
         }
     }
     public native String stringFromJNI3(String stl_path,String gcode_path);
 
-    public void printing(View view) {
-        Intent intent8 = new Intent();
-        intent8.setClass(getApplicationContext(), DaYinJieMian.class);
-        startActivity(intent8);
-    }
 
     private void getFileName(File[] files) {
         if (files != null) {// 先判断目录是否为空，否则会报空指针
@@ -195,6 +194,7 @@ public class UPicture extends AppCompatActivity {
             }
         }
     }
+
     private void copy( String Filepathofcopy,String FileToCopy){
         try {
             FileInputStream fis = new FileInputStream(FileToCopy);
