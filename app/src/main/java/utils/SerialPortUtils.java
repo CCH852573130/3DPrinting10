@@ -128,6 +128,7 @@ public class SerialPortUtils {
                             X_posi_num1 = Match_num(receive, "X\\:[0-9]+(\\.[0-9]+)?");
                             Y_posi_num1 = Match_num(receive, "Y\\:[0-9]+(\\.[0-9]+)?");
                             Z_posi_num1 = Match_num(receive, "Z\\:[0-9]+(\\.[0-9]+)?");
+                            Log.d("Test", "test" + Z_posi_num1);
                         }
                     }//用串口调试助手测，2字符发送17次，3字符9次，4字符8次，大概都发送到36-39字符左右就会出现乱码？这个是串口调试助手的问题！
                 } catch (IOException e) {

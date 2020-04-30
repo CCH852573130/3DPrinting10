@@ -128,5 +128,6 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
     open.sendDataToSerialPort(bytoftempofbackbed);
     open.sendDataToSerialPort(bytoftempofextruder);
     Log.d("test", "一键预热成功");
+    Toast.makeText(this,"喷头预热温度55，热床预热温度60，正在加热……",Toast.LENGTH_SHORT).show();
   }
 }

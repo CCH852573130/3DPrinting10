@@ -16,12 +16,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -80,7 +78,7 @@ public class UPicture extends AppCompatActivity {
                 {
                     listStr.remove(myBeanList.get(position).get("filepath").toString());
                 }
-                tvSelected.setText("已选择了:" + listStr.size() + "项");
+                tvSelected.setText("您已选择了:" + listStr.size() + "个STL模型");
             }
         });
     }
