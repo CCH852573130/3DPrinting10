@@ -19,6 +19,7 @@ import java.io.FileInputStream;
 import utils.SerialPortUtils;
 
 import static com.mukesh.drawingview.example.ZhuJieMian.open;
+import static utils.SerialPortUtils.percent;
 
 //开始打印 将gcode文件传给打印机
 
@@ -98,7 +99,6 @@ public class DaYinJieMian extends AppCompatActivity {
                                 handler3.sendEmptyMessage(123);
                             }
                         }.start();
-
  */
                      new Thread(Runnableysn).start();
                     } catch (Exception e) {
@@ -220,10 +220,14 @@ public class DaYinJieMian extends AppCompatActivity {
 //    函数作用：更新UI，首先findViewById方法定位，然后用settext方法更新数值，记得数值在SerialPortUtils里，关键字不要变
 //     */
     public void refreshUI(){
-        //这里是算法实现部分，具体算法实现有待考究
+        /*这里是算法实现部分，具体算法实现有待考究
         double Znum = Double.parseDouble(SerialPortUtils.Z_posi_num1);
         double per = 0.1 * Znum;
         currentProgress = Double.valueOf(per).intValue();
+         */
+        String currentpercent = percent.substring(0,percent.lastIndexOf("/"));
+        String totalpercent =percent.substring(percent.lastIndexOf("/")+1);
+        currentProgress = Double.valueOf(100 * Double.valueOf(Double.valueOf(currentpercent)/Double.valueOf(totalpercent))).intValue();
         mPbLoading = findViewById(R.id.progressBar);
         mPbLoading.setProgress(currentProgress);
 //        Log.d("Test","test" + currentProgress);
@@ -234,7 +238,7 @@ public class DaYinJieMian extends AppCompatActivity {
         @Override
         public void run() {
             handler2.postDelayed(this, 5000);
-            String str3 = "M114";
+            String str3 = "M27";
             byte[] bty4 =str3.getBytes();
             open.sendDataToSerialPort(bty4);
         }

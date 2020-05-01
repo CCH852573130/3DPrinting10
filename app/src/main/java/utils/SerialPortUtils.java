@@ -22,6 +22,7 @@ public class SerialPortUtils {
     public static volatile String X_posi_num1 = "0.0";
     public static volatile String Y_posi_num1 = "0.0";
     public static volatile String Z_posi_num1 = "0.0";
+    public static volatile String percent="0/100";
     /*
     作者：蔚晟楠
     函数作用：完成单例模式，如果没有实例化则创建一个实例，如果有则使用
@@ -128,7 +129,10 @@ public class SerialPortUtils {
                             X_posi_num1 = Match_num(receive, "X\\:[0-9]+(\\.[0-9]+)?");
                             Y_posi_num1 = Match_num(receive, "Y\\:[0-9]+(\\.[0-9]+)?");
                             Z_posi_num1 = Match_num(receive, "Z\\:[0-9]+(\\.[0-9]+)?");
-                            Log.d("Test", "test" + Z_posi_num1);
+//                            Log.d("Test", "test" + Z_posi_num1);
+                        }
+                        else if(receive.startsWith("SD printing byte")){
+                            percent =Match_ysn(receive,"[0-9]+(\\/[0-9]+)?");
                         }
                     }//用串口调试助手测，2字符发送17次，3字符9次，4字符8次，大概都发送到36-39字符左右就会出现乱码？这个是串口调试助手的问题！
                 } catch (IOException e) {
@@ -149,6 +153,14 @@ public class SerialPortUtils {
         Matcher m = p.matcher(s);
         while(m.find()){
             return m.group(0).substring(2);
+        }
+        return "";
+    }
+    private String Match_ysn(String s,String regex){
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(s);
+        while(m.find()){
+            return m.group(0);
         }
         return "";
     }
