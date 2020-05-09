@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import opengl.GLRenderer;
 import usbcontroler.USBDiskState;
 
 
@@ -158,7 +159,8 @@ public class UPicture extends AppCompatActivity {
             Intent intent8 = new Intent();
             intent8.setClass(getApplicationContext(), DaYinJieMian.class);
             Bundle mBundle = new Bundle();
-            mBundle.putString("Data", File_Path_gcode);//压入数据
+            mBundle.putString("Gcode", File_Path_gcode);//压入数据
+            mBundle.putString("stlpath",abc);
             intent8.putExtras(mBundle);
             startActivity(intent8);
             System.exit(0);

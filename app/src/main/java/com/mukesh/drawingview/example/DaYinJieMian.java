@@ -1,14 +1,23 @@
 package com.mukesh.drawingview.example;
 
+import android.app.ActivityManager;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.ConfigurationInfo;
+import android.opengl.GLSurfaceView;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +25,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
+import opengl.GLRenderer;
 import utils.SerialPortUtils;
 
 import static com.mukesh.drawingview.example.ZhuJieMian.open;
@@ -27,17 +37,85 @@ public class DaYinJieMian extends AppCompatActivity {
     public String File_Path;
     public volatile int currentProgress = 0;
     public ProgressBar mPbLoading;
+    public Button mbutton;
+    public volatile static String previewpath ="";
+    private boolean supportsEs2;
+    private GLSurfaceView glView;
+    private float rotateDegreen = 0;
+    private GLRenderer glRenderer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle bundle=getIntent().getExtras();
+        File_Path =bundle.getString("Gcode");
+        previewpath = bundle.getString("stlpath");
         setContentView(R.layout.activity_dayinjiemian);
+        RelativeLayout ysn =findViewById(R.id.ysn);
+//        final ConstraintLayout ysn =findViewById(R.id.ysn);
+        checkSupported();
+        if (supportsEs2) {
+            glView = new GLSurfaceView(this);
+            glRenderer = new GLRenderer(this);
+            glView.setRenderer(glRenderer);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(600, 250);
+            params.topMargin = 50;   //距离顶部高度
+            params.leftMargin = 100; //距离左边高度
+            ysn.addView(glView,params);
+        }else{
+            setContentView(R.layout.activity_dayinjiemian);
+            Toast.makeText(this, "当前设备不支持OpenGL ES 2.0!", Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (glView != null) {
+            glView.onResume();
 
+            //不断改变rotateDegreen值，实现旋转
+            new Thread() {
+                @Override
+                public void run() {
+                    while (true) {
+                        try {
+                            sleep(100);
+
+                            rotateDegreen += 5;
+                            handler.sendEmptyMessage(0x001);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }
+            }.start();
+        }
+    }
+
+    private void checkSupported() {
+        ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+        ConfigurationInfo configurationInfo = activityManager.getDeviceConfigurationInfo();
+        supportsEs2 = configurationInfo.reqGlEsVersion >= 0x2000;
+
+        boolean isEmulator = Build.VERSION.SDK_INT > Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1
+                && (Build.FINGERPRINT.startsWith("generic")
+                || Build.FINGERPRINT.startsWith("unknown")
+                || Build.MODEL.contains("google_sdk")
+                || Build.MODEL.contains("Emulator")
+                || Build.MODEL.contains("Android SDK built for x86"));
+        supportsEs2 = supportsEs2 || isEmulator;
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (glView != null) {
+            glView.onPause();
+        }
     }
 
     protected void onStart(){
         super.onStart();
-        Bundle bundle=getIntent().getExtras();
-        File_Path =bundle.getString("Data");
+        //
        try{
             String abc ="123";
             byte[] data11 = abc.getBytes();
@@ -68,10 +146,10 @@ public class DaYinJieMian extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 File file = new File(File_Path);
-                Log.d("test", "aaaaa");
+                Log.d("test",File_Path);
+///                Log.d("test", "aaaaa");
                 if (file.canRead()) {
                     try {
-                        Log.d("test", "bbbbb");
                         FileInputStream fis = new FileInputStream(file);
                         ByteArrayOutputStream bos = new ByteArrayOutputStream(1024);
                         byte[] b1 = new byte[1024];
@@ -89,17 +167,6 @@ public class DaYinJieMian extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"打印任务已开始",Toast.LENGTH_SHORT).show();
                         Log.d("Test", "开始打印");
                         handler2.postDelayed(runnable, 5000);
-/*                        new Thread()
-                        {
-                            public void run()
-                            {
-                                double Znum = Double.parseDouble(SerialPortUtils.Z_posi_num1);
-                                double per = Znum/100.0;
-                                currentProgress = Double.valueOf(per).intValue();
-                                handler3.sendEmptyMessage(123);
-                            }
-                        }.start();
- */
                      new Thread(Runnableysn).start();
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -132,35 +199,7 @@ public class DaYinJieMian extends AppCompatActivity {
         //显示对话框
         dialog.show();
     }
-//            Bundle bundle = getIntent().getExtras();   //得到传过来的bundle
-//            Toast.makeText(this, File_Path, Toast.LENGTH_SHORT).show();
-/*
-            File file = new File(File_Path);
-            Log.d("test","aaaaa");
-            if (file.canRead()) {
-                try {
-                    Log.d("test","bbbbb");
-                    FileInputStream fis = new FileInputStream(file);
-                    ByteArrayOutputStream bos = new ByteArrayOutputStream(1024);
-                    byte[] b1 = new byte[1024];
-                    int n;
-                    while ((n = fis.read(b1)) != -1) {
-                        bos.write(b1, 0, n);
-                    }
-                    fis.close();
-                    byte[] data = bos.toByteArray();
-                    bos.close();
-                    open.sendDataToSerialPort(data);
-                    String str = "M24";
-                    byte[] bty1 = str.getBytes();
-                    open.sendDataToSerialPort(bty1);
-                    Log.d("Test", "开始打印");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
 
- */
     public void send_M25(View view){
         String str1 = "M25";
         byte[] bty2 =str1.getBytes();
@@ -176,19 +215,6 @@ public class DaYinJieMian extends AppCompatActivity {
         Toast.makeText(this,"打印任务已紧急停止",Toast.LENGTH_SHORT).show();
         Log.d("Test", "停止打印" + str2);
     }
-
-/*
-    Handler handler3 = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg.what == 123) {
-//                mPbLoading.setProgress(currentProgress);
-                mPbLoading.setProgress(currentProgress);
-            }
-        }
-    };
-
- */
 
     public Runnable Runnableysn = new Runnable() {
         @Override
@@ -220,11 +246,6 @@ public class DaYinJieMian extends AppCompatActivity {
 //    函数作用：更新UI，首先findViewById方法定位，然后用settext方法更新数值，记得数值在SerialPortUtils里，关键字不要变
 //     */
     public void refreshUI(){
-        /*这里是算法实现部分，具体算法实现有待考究
-        double Znum = Double.parseDouble(SerialPortUtils.Z_posi_num1);
-        double per = 0.1 * Znum;
-        currentProgress = Double.valueOf(per).intValue();
-         */
         String currentpercent = percent.substring(0,percent.lastIndexOf("/"));
         String totalpercent =percent.substring(percent.lastIndexOf("/")+1);
         currentProgress = Double.valueOf(100 * Double.valueOf(Double.valueOf(currentpercent)/Double.valueOf(totalpercent))).intValue();
@@ -232,6 +253,17 @@ public class DaYinJieMian extends AppCompatActivity {
         mPbLoading.setProgress(currentProgress);
 //        Log.d("Test","test" + currentProgress);
     }
+    public void rotate(float degree) {
+        glRenderer.rotate(degree);
+        glView.invalidate();
+    }
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            rotate(rotateDegreen);
+        }
+    };
 
     Handler handler2 =new Handler();
     Runnable runnable=new Runnable() {

@@ -26,6 +26,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import opengl.GLRenderer;
+
 
 public class MoXingKu extends AppCompatActivity  {
     private GridView mGv;
@@ -159,11 +161,12 @@ public class MoXingKu extends AppCompatActivity  {
                         String gcode_path1 = fPath.replace( "png","gcode" );
                         String gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
                         stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
-//                        Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show();
+//                        Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show()
                         Intent intent = new Intent();
                         intent.setClass(getApplicationContext(), DaYinJieMian.class);
                         Bundle mBundle = new Bundle();
-                        mBundle.putString("Data", gcode_path2);//压入数据
+                        mBundle.putString("Gcode", gcode_path2);//压入数据
+                        mBundle.putString("stlpath",stl_path2);
                         intent.putExtras(mBundle);
                         startActivity(intent);
                         System.exit( 0 );
