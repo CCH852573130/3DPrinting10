@@ -26,27 +26,25 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import opengl.GLRenderer;
 
-
-public class MoXingKu extends AppCompatActivity  {
+public class 人物角色 extends AppCompatActivity  {
     private GridView mGv;
     static {
         System.loadLibrary("native-lib");
     }
 
-    private static final String FILE_NAME[] = {
-            "a.png", "b.png",
-            "c.png", "d.png",
-            "e.png", "p2.png",
-    };
-    private static final String stl_NAME[] = {
-            "a.STL", "b.STL",
-            "c.STL", "d.STL",
-            "e.STL", "p2.STL",
-
-
-    };
+//    private static final String FILE_NAME[] = {
+//            "a.png", "b.png",
+//            "c.png", "d.png",
+//            "e.png", "p2.png",
+//    };
+//    private static final String stl_NAME[] = {
+//            "a.STL", "b.STL",
+//            "c.STL", "d.STL",
+//            "e.STL", "p2.STL",
+//
+//
+//    };
     private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
     /*
@@ -99,8 +97,7 @@ public class MoXingKu extends AppCompatActivity  {
         Log.d( "MoXing","oncreate" );
         Log.d("MoXing","taskid:"+getTaskId()+"  ,hash:"+hashCode());
         logtaskName();
-        initUI();
-        String sdpath = Environment.getExternalStorageDirectory() + "/picture";//获得SD卡中图片的路径
+        String sdpath = Environment.getExternalStorageDirectory() + "/renwujuese/picture";//获得SD卡中图片的路径
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
         if (imagePath.size() < 1) {//如果不存在文件图片
             return;
@@ -131,7 +128,7 @@ public class MoXingKu extends AppCompatActivity  {
             public View getView(int position, View view, ViewGroup viewGroup) {
                 ViewHolder holder = null;
                 if (view == null) {
-                    LayoutInflater mLayoutInflater = LayoutInflater.from( MoXingKu.this );
+                    LayoutInflater mLayoutInflater = LayoutInflater.from( 人物角色.this );
                     view = mLayoutInflater.inflate( R.layout.layout_grid_item, null );
                     holder = new ViewHolder();
                     holder.imageView = (ImageView) view.findViewById( R.id.iv_grid );
@@ -142,7 +139,7 @@ public class MoXingKu extends AppCompatActivity  {
                 }
                 //赋值
                 String fName = imagePath.get(position).trim();
-                String fileName = fName.substring(fName.lastIndexOf("/")+1);
+                String fileName = fName.substring(fName.lastIndexOf("/")+1,fName.lastIndexOf("."));
                 holder.textView.setText( fileName );
                 //为ImageView设置要显示的图片
                 Bitmap bm= BitmapFactory.decodeFile(imagePath.get(position));
@@ -214,48 +211,48 @@ public class MoXingKu extends AppCompatActivity  {
 
 
 
-    private void initUI() {
-
-
-        //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
-        File testFolder = new File( Environment.getExternalStorageDirectory() + "/picture");
-        if(testFolder.exists() && testFolder.isDirectory() ) {
-        Toast.makeText( getApplicationContext(),"图片已经存在",Toast.LENGTH_LONG ).show();
-    } else if(!testFolder.exists()) {
-        testFolder.mkdir();
-// check whether the model files exist in the phone **/
-// if not, copy them to there                       **/
-        for (int n =0; n < FILE_NAME.length; n++) {
-            File modelFile = new File(testFolder, FILE_NAME[n]);
-            if (!modelFile.exists()) {
-                copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
-            }
-        }
-        Toast.makeText( getApplicationContext(),"上传图片成功",Toast.LENGTH_LONG ).show();
-    }
-
-        //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
-        File testFolder2 = new File( Environment.getExternalStorageDirectory() + "/stl_file");
-        File testFolder3 = new File( Environment.getExternalStorageDirectory() + "/gcode_file");
-        if(testFolder2.exists() && testFolder2.isDirectory() ) {
-            Toast.makeText( getApplicationContext(),"stl已经存在",Toast.LENGTH_LONG ).show();
-        } else if(!testFolder2.exists()) {
-            testFolder2.mkdir();
-// check whether the model files exist in the phone **/
-// if not, copy them to there                       **/
-            for (int n =0; n < stl_NAME.length; n++) {
-                File modelFile2 = new File(testFolder2, stl_NAME[n]);
-                if (!modelFile2.exists()) {
-                    copyAssetFilesToSDCard(modelFile2, stl_NAME[n]);
-                }
-            }
-            Toast.makeText( getApplicationContext(),"上传stl成功",Toast.LENGTH_LONG ).show();
-        }
-        if(testFolder3.exists() && testFolder3.isDirectory() ) {
-            Toast.makeText( getApplicationContext(),"gcode已经存在",Toast.LENGTH_LONG ).show();
-        } else if(!testFolder3.exists()) {
-            testFolder3.mkdir();}
-}
+//    private void initUI() {
+//
+//
+//        //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
+//        File testFolder = new File( Environment.getExternalStorageDirectory() + "/picture");
+//        if(testFolder.exists() && testFolder.isDirectory() ) {
+//        Toast.makeText( getApplicationContext(),"图片已经存在",Toast.LENGTH_LONG ).show();
+//    } else if(!testFolder.exists()) {
+//        testFolder.mkdir();
+//// check whether the model files exist in the phone **/
+//// if not, copy them to there                       **/
+//        for (int n =0; n < FILE_NAME.length; n++) {
+//            File modelFile = new File(testFolder, FILE_NAME[n]);
+//            if (!modelFile.exists()) {
+//                copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
+//            }
+//        }
+//        Toast.makeText( getApplicationContext(),"上传图片成功",Toast.LENGTH_LONG ).show();
+//    }
+//
+//        //将drawable文件夹下的文件加载至SD卡中（路径可以按你们需要改）[有难度，好像只有asserts下的才能用IO流]
+//        File testFolder2 = new File( Environment.getExternalStorageDirectory() + "/stl_file");
+//        File testFolder3 = new File( Environment.getExternalStorageDirectory() + "/gcode_file");
+//        if(testFolder2.exists() && testFolder2.isDirectory() ) {
+//            Toast.makeText( getApplicationContext(),"stl已经存在",Toast.LENGTH_LONG ).show();
+//        } else if(!testFolder2.exists()) {
+//            testFolder2.mkdir();
+//// check whether the model files exist in the phone **/
+//// if not, copy them to there                       **/
+//            for (int n =0; n < stl_NAME.length; n++) {
+//                File modelFile2 = new File(testFolder2, stl_NAME[n]);
+//                if (!modelFile2.exists()) {
+//                    copyAssetFilesToSDCard(modelFile2, stl_NAME[n]);
+//                }
+//            }
+//            Toast.makeText( getApplicationContext(),"上传stl成功",Toast.LENGTH_LONG ).show();
+//        }
+//        if(testFolder3.exists() && testFolder3.isDirectory() ) {
+//            Toast.makeText( getApplicationContext(),"gcode已经存在",Toast.LENGTH_LONG ).show();
+//        } else if(!testFolder3.exists()) {
+//            testFolder3.mkdir();}
+//}
     private void logtaskName(){
         try {
             ActivityInfo info = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
@@ -264,31 +261,31 @@ public class MoXingKu extends AppCompatActivity  {
             e.printStackTrace();
         }
     }
-    private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {//lastIndexOf去掉后缀名，说实话有点天才
-//                    int id =getResources().getIdentifier(FileToCopy, "drawable", getPackageName()); //name:图片的名，defType：资源类型（drawable，string。。。），defPackage:工程的包名
-
-//                    InputStream is = getResources().getDrawable(id);
-                    InputStream is = getAssets().open(FileToCopy);
-                    FileOutputStream fos = new FileOutputStream(testFileOnSdCard);
-                    byte[] buffer = new byte[8192];
-                    int read;
-                    try {
-                        while ((read = is.read(buffer)) != -1) {
-                            fos.write(buffer, 0, read);
-                        }
-                    } finally {
-                        fos.flush();
-                        fos.close();
-                        is.close();
-                    }
-                } catch (IOException e) {
-                    Log.d("aaa", "Can't copy test file onto SD card");
-                }
-            }
-        }).start();
-    }
+//    private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {//lastIndexOf去掉后缀名，说实话有点天才
+////                    int id =getResources().getIdentifier(FileToCopy, "drawable", getPackageName()); //name:图片的名，defType：资源类型（drawable，string。。。），defPackage:工程的包名
+//
+////                    InputStream is = getResources().getDrawable(id);
+//                    InputStream is = getAssets().open(FileToCopy);
+//                    FileOutputStream fos = new FileOutputStream(testFileOnSdCard);
+//                    byte[] buffer = new byte[8192];
+//                    int read;
+//                    try {
+//                        while ((read = is.read(buffer)) != -1) {
+//                            fos.write(buffer, 0, read);
+//                        }
+//                    } finally {
+//                        fos.flush();
+//                        fos.close();
+//                        is.close();
+//                    }
+//                } catch (IOException e) {
+//                    Log.d("aaa", "Can't copy test file onto SD card");
+//                }
+//            }
+//        }).start();
+//    }
 }

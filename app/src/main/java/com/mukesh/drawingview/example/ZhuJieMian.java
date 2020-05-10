@@ -100,7 +100,7 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
         break;
       case R.id.button3:
         Intent intent2 = new Intent();
-        intent2.setClass(getApplicationContext(), MoXingKu.class);
+        intent2.setClass(getApplicationContext(), MoXingKuShouYe.class);
         startActivity(intent2);
         break;
       case R.id.button2:

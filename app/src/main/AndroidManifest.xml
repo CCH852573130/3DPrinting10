@@ -6,32 +6,38 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:hardwareAccelerated="false"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DaYinJieMian"></activity>
+        <activity android:name=".MoXingKuShouYe"></activity>
+        <activity android:name=".DaYinJieMian" />
         <activity android:name=".UPicture" />
         <activity android:name=".SheZhi" />
-        <activity android:name=".MoXingKu" />
+        <activity android:name=".人物角色" />
+        <activity android:name=".动物植物" />
+        <activity android:name=".工具配件" />
+        <activity android:name=".教育学习" />
         <activity android:name=".ZhuanYeMoShi" />
         <activity android:name=".JianBiHua" />
         <activity android:name=".ZhuJieMian">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver android:name=".USBDiskReceiver">
-            <intent-filter android:priority="1000" >
+            <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
                 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
                 <action android:name="android.intent.action.MEDIA_REMOVED" />
+
                 <data android:scheme="file" />
             </intent-filter>
         </receiver>
     </application>
+
 </manifest>

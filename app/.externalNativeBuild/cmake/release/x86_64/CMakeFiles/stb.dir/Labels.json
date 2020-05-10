@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb-complete.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb-complete.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-install.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-install.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-mkdir.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-mkdir.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-download.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-download.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-patch.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-patch.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-configure.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-configure.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-build.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-build.rule"
 		},
 		{
-			"file" : "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-skip-update.rule"
+			"file" : "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/stb-prefix/src/stb-stamp/stb-skip-update.rule"
 		}
 	],
 	"target" : 

@@ -54,6 +54,7 @@ public class DaYinJieMian extends AppCompatActivity {
 //        final ConstraintLayout ysn =findViewById(R.id.ysn);
         checkSupported();
         if (supportsEs2) {
+            //
             glView = new GLSurfaceView(this);
             glRenderer = new GLRenderer(this);
             glView.setRenderer(glRenderer);

@@ -1,6 +1,6 @@
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb.dir
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/clipper.dir
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/_CuraEngine.dir
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/native-lib.dir
-D:/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/stb.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/clipper.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/_CuraEngine.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/native-lib.dir
+D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
