@@ -46,8 +46,8 @@ Java_com_mukesh_drawingview_example_JianBiHua_stringFromJNI(
     LOGI("正在切片");
     char *myargv[13] = {"a", "slice", "-v", "-j", "/mnt/sdcard/test/fdmprinter.def.json", "-v", "-j",
                         "/mnt/sdcard/test/fdmextruder.def.json","-o",
-                        "/mnt/sdcard/test/test120.gcode","-e1","-l",
-                        "/mnt/sdcard/test/box.STL"};
+                        "/mnt/sdcard/test/龚雨晨.gcode","-e1","-l",
+                        "/mnt/sdcard/test/诗歌.STL"};
     int myargc = 13;
     cura::Application::getInstance().run((unsigned int)myargc, (char**)myargv);
     return env->NewStringUTF(hello.c_str());
@@ -56,7 +56,7 @@ Java_com_mukesh_drawingview_example_JianBiHua_stringFromJNI(
 char* jstringToChar(JNIEnv* env, jstring jstr) {
     char* rtn = NULL;
     jclass clsstring = env->FindClass("java/lang/String");
-    jstring strencode = env->NewStringUTF("GB2312");
+    jstring strencode = env->NewStringUTF("utf-8");
     jmethodID mid = env->GetMethodID(clsstring, "getBytes", "(Ljava/lang/String;)[B");
     jbyteArray barr = (jbyteArray) env->CallObjectMethod(jstr, mid, strencode);
     jsize alen = env->GetArrayLength(barr);

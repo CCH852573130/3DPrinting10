@@ -7,6 +7,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +35,8 @@ public class 动物植物 extends AppCompatActivity  {
         System.loadLibrary("native-lib");
     }
 
-
+    private Handler mHandler;
+    private Runnable mBackgroundRunnable;
     private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
     /*
@@ -83,6 +86,9 @@ public class 动物植物 extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_moxingku );
+        HandlerThread thread = new HandlerThread("MyHandlerThread");
+        thread.start();//创建一个HandlerThread并启动它
+        mHandler = new Handler(thread.getLooper());//使用HandlerThread的looper对象创建Handler，如果使用默认的构造方法，很有可能阻塞UI线程
         String sdpath = Environment.getExternalStorageDirectory() + "/dongwuzhiwu/picture";//获得SD卡中图片的路径
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
         if (imagePath.size() < 1) {//如果不存在文件图片
@@ -137,6 +143,9 @@ public class 动物植物 extends AppCompatActivity  {
         mGv.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
+                mBackgroundRunnable = new Runnable() {
+                    @Override
+                    public void run() {
                         String fPath = imagePath.get(position).trim();
                         String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
                         String stl_path1 = fPath.replace( "png","STL" );
@@ -153,8 +162,12 @@ public class 动物植物 extends AppCompatActivity  {
                         intent.putExtras(mBundle);
                         startActivity(intent);
                         System.exit( 0 );
+                    }
+                };
+                mHandler.post(mBackgroundRunnable);//将线程post到Handler中
             }
         } );
+
     }
 
     @Override
@@ -191,6 +204,7 @@ public class 动物植物 extends AppCompatActivity  {
     protected void onDestroy() {
         super.onDestroy();
         Log.d( "MoXing","ondestroy" );
+        mHandler.removeCallbacks( mBackgroundRunnable );
     }
 
     public native String stringFromJNI4(String stl_path, String gcode_path);
