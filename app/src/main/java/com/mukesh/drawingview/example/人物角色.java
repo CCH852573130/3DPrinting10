@@ -1,5 +1,8 @@
 package com.mukesh.drawingview.example;
 
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -7,6 +10,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -45,6 +51,11 @@ public class 人物角色 extends AppCompatActivity  {
 //
 //
 //    };
+//    private volatile boolean flag = true;//同一时刻只有一个线程能修改值
+    private Thread thread;
+    private Handler handler;
+    private ProgressDialog progressDialog;
+    private String gcode_path2,stl_path2;
     private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
     /*
@@ -90,6 +101,7 @@ public class 人物角色 extends AppCompatActivity  {
         }
     }
 
+    @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -97,6 +109,23 @@ public class 人物角色 extends AppCompatActivity  {
         Log.d( "MoXing","oncreate" );
         Log.d("MoXing","taskid:"+getTaskId()+"  ,hash:"+hashCode());
         logtaskName();
+        //此handler与主UI线程绑定
+        handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage( msg );
+                //关闭对话框并跳转
+                progressDialog.dismiss();
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), DaYinJieMian.class);
+                Bundle mBundle = new Bundle();
+                mBundle.putString("Gcode", gcode_path2);//压入数据
+                mBundle.putString("stlpath",stl_path2);
+                intent.putExtras(mBundle);
+                startActivity(intent);
+                System.exit( 0 );//退出的是跳转前的界面
+            }
+        };
         String sdpath = Environment.getExternalStorageDirectory() + "/renwujuese/picture";//获得SD卡中图片的路径
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
         if (imagePath.size() < 1) {//如果不存在文件图片
@@ -151,28 +180,34 @@ public class 人物角色 extends AppCompatActivity  {
         mGv.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
-                        new Thread(){
-                            @Override
-                            public void run() {
-                                super.run();
-                                String fPath = imagePath.get(position).trim();
-                                String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
-                                String stl_path1 = fPath.replace( "png","STL" );
-                                String stl_path2 = stl_path1.replace( "picture","stl_file" );
-                                String gcode_path1 = fPath.replace( "png","gcode" );
-                                String gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
-                                stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
-                                Intent intent = new Intent();
-                                intent.setClass(getApplicationContext(), DaYinJieMian.class);
-                                Bundle mBundle = new Bundle();
-                                mBundle.putString("Gcode", gcode_path2);//压入数据
-                                mBundle.putString("stlpath",stl_path2);
-                                intent.putExtras(mBundle);
-                                startActivity(intent);
-                                System.exit( 0 );
-                            }
-                        }.start();
-//                        Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show()
+                //点击图片，先执行show()弹出对话框，同时开启子线程
+                progressDialog = new ProgressDialog( 人物角色.this );
+                progressDialog.setTitle( "提示" );
+                progressDialog.setMessage( "正在切片..." );
+                progressDialog.setButton( DialogInterface.BUTTON_POSITIVE, "取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.exit( 0 );
+                    }
+                } );
+                progressDialog.setCancelable( false );
+                progressDialog.show();
+                thread = new Thread( new Runnable() {
+                    @Override
+                    public void run() {
+                        String fPath = imagePath.get(position).trim();
+                        String fileName2 = fPath.substring(fPath.lastIndexOf("/")+1);
+                        String stl_path1 = fPath.replace( "png","STL" );
+                        stl_path2 = stl_path1.replace( "picture","stl_file" );
+                        String gcode_path1 = fPath.replace( "png","gcode" );
+                        gcode_path2 = gcode_path1.replace( "picture","gcode_file" );
+                        stringFromJNI2(stl_path2,gcode_path2);//进行切片操作，接口需要传入stl和gcode路径
+                        //当切片完成后向handler发消息
+                        handler.sendEmptyMessage(0);
+                    }
+                } );
+                thread.start();//为什么两部分不能连在一起写？
+//              Toast.makeText( getApplicationContext(),fileName2+"切片成功",Toast.LENGTH_LONG ).show()
             }
         } );
     }
@@ -212,6 +247,7 @@ public class 人物角色 extends AppCompatActivity  {
         super.onDestroy();
         Log.d( "MoXing","ondestroy" );
     }
+
 
     public native String stringFromJNI2(String stl_path, String gcode_path);
 

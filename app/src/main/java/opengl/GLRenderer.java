@@ -68,7 +68,7 @@ public class GLRenderer  implements GLSurfaceView.Renderer {
                 center.y, center.z, up.x, up.y, up.z);
 
         //为了能有立体感觉，通过改变mDegree值，让模型不断旋转
-        gl.glRotatef(mDegree, 0, 1, 0);
+        gl.glRotatef(mDegree, 1, 1, 1);
 
         //将模型放缩到View刚好装下
         gl.glScalef(mScalef, mScalef, mScalef);
