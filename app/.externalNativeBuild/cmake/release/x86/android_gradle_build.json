@@ -1,467 +1,467 @@
 {
   "stringTable": {
-    "0": "D:/androidproject/3DPrinting10/app/.externalNativeBuild/cmake/release/x86",
-    "1": "--target=i686-none-linux-android16 --gcc-toolchain=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dclipper_EXPORTS -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11",
-    "2": "--target=i686-none-linux-android16 --gcc-toolchain=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DVERSION=\"master\" -D_CuraEngine_EXPORTS -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11",
-    "3": "--target=i686-none-linux-android16 --gcc-toolchain=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnative_lib_EXPORTS -Istb-prefix/src -I. -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs -ID:/androidproject/3DPrinting10/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11"
+    "0": "D:/new1/app/.externalNativeBuild/cmake/release/x86",
+    "1": "--target=i686-none-linux-android16 --gcc-toolchain=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dclipper_EXPORTS -Istb-prefix/src -I. -ID:/new1/app/src/main/cpp/libs -ID:/new1/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11",
+    "2": "--target=i686-none-linux-android16 --gcc-toolchain=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DVERSION=\"master\" -D_CuraEngine_EXPORTS -Istb-prefix/src -I. -ID:/new1/app/src/main/cpp/libs -ID:/new1/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11",
+    "3": "--target=i686-none-linux-android16 --gcc-toolchain=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidStudio/SDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnative_lib_EXPORTS -Istb-prefix/src -I. -ID:/new1/app/src/main/cpp/libs -ID:/new1/app/src/main/cpp/libs/clipper -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O3 -DNDEBUG -Wall -O2 -DNDEBUG -fPIC -std=gnu++11"
   },
   "buildFiles": [
-    "D:\\sdk\\ndk\\21.0.6113669\\build\\cmake\\platforms.cmake",
-    "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
-    "D:\\sdk\\ndk\\21.0.6113669\\build\\cmake\\android.toolchain.cmake",
-    "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\CMakeLists.txt"
+    "E:\\AndroidStudio\\SDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "D:\\new1\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
+    "E:\\AndroidStudio\\SDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "D:\\new1\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
+    "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
   ],
   "libraries": {
     "_CuraEngine-Release-x86": {
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\x86 --target _CuraEngine",
+      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\x86 --target _CuraEngine",
       "buildType": "release",
-      "toolchain": "2243296795",
+      "toolchain": "1206808255",
       "abi": "x86",
       "artifactName": "_CuraEngine",
       "files": [
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Application.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Application.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\bridge.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\bridge.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\ConicalOverhang.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\ConicalOverhang.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\ExtruderTrain.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\ExtruderTrain.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\FffGcodeWriter.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\FffGcodeWriter.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\FffPolygonGenerator.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\FffPolygonGenerator.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\FffProcessor.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\FffProcessor.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\gcodeExport.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\gcodeExport.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\GCodePathConfig.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\GCodePathConfig.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\InsetOrderOptimizer.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\InsetOrderOptimizer.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\layerPart.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\layerPart.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\LayerPlan.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\LayerPlan.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\LayerPlanBuffer.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\LayerPlanBuffer.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\MergeInfillLines.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\MergeInfillLines.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\mesh.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\mesh.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\MeshGroup.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\MeshGroup.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Mold.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Mold.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\multiVolumes.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\multiVolumes.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathOrderOptimizer.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathOrderOptimizer.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Preheat.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Preheat.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\PrimeTower.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\PrimeTower.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\raft.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\raft.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Scene.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Scene.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\skin.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\skin.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\SkirtBrim.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\SkirtBrim.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\SupportInfillPart.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\SupportInfillPart.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Slice.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Slice.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\sliceDataStorage.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\sliceDataStorage.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\slicer.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\slicer.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\support.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\support.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\timeEstimate.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\timeEstimate.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\TopSurface.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\TopSurface.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\TreeSupport.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\TreeSupport.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\WallsComputation.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\WallsComputation.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\wallOverlap.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\wallOverlap.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Weaver.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Weaver.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\Wireframe2gcode.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\Wireframe2gcode.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\communication\\ArcusCommunication.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\communication\\ArcusCommunication.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\communication\\ArcusCommunicationPrivate.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\communication\\ArcusCommunicationPrivate.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\communication\\CommandLine.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\communication\\CommandLine.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\communication\\Listener.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\communication\\Listener.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\ImageBasedDensityProvider.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\ImageBasedDensityProvider.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\NoZigZagConnectorProcessor.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\NoZigZagConnectorProcessor.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\ZigzagConnectorProcessor.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\ZigzagConnectorProcessor.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\SierpinskiFill.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\SierpinskiFill.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\SierpinskiFillProvider.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\SierpinskiFillProvider.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\SpaghettiInfill.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\SpaghettiInfill.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\SpaghettiInfillPathGenerator.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\SpaghettiInfillPathGenerator.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\SubDivCube.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\SubDivCube.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\infill\\GyroidInfill.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\infill\\GyroidInfill.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathPlanning\\Comb.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathPlanning\\Comb.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathPlanning\\GCodePath.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathPlanning\\GCodePath.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathPlanning\\LinePolygonsCrossings.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathPlanning\\LinePolygonsCrossings.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathPlanning\\NozzleTempInsert.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathPlanning\\NozzleTempInsert.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\pathPlanning\\TimeMaterialEstimates.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\pathPlanning\\TimeMaterialEstimates.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\progress\\Progress.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\progress\\Progress.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\progress\\ProgressStageEstimator.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\progress\\ProgressStageEstimator.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\settings\\AdaptiveLayerHeights.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\settings\\AdaptiveLayerHeights.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\settings\\FlowTempGraph.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\settings\\FlowTempGraph.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\settings\\PathConfigStorage.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\settings\\PathConfigStorage.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\settings\\Settings.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\settings\\Settings.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\AABB.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\AABB.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\AABB3D.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\AABB3D.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\Date.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\Date.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\gettime.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\gettime.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\getpath.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\getpath.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\LinearAlg2D.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\LinearAlg2D.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\ListPolyIt.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\ListPolyIt.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\logoutput.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\logoutput.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\MinimumSpanningTree.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\MinimumSpanningTree.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\Point3.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\Point3.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\PolygonConnector.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\PolygonConnector.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\PolygonsPointIndex.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\PolygonsPointIndex.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\PolygonProximityLinker.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\PolygonProximityLinker.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\polygonUtils.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\polygonUtils.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\polygon.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\polygon.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\ProximityPointLink.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\ProximityPointLink.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\SVG.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\SVG.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\src\\utils\\socket.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\src\\utils\\socket.cpp",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\lib_CuraEngine.so"
+      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\lib_CuraEngine.so"
     },
     "native-lib-Release-x86": {
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
+      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
       "buildType": "release",
-      "toolchain": "2243296795",
+      "toolchain": "1206808255",
       "abi": "x86",
       "artifactName": "native-lib",
       "files": [
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\native-lib.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\native-lib.cpp",
           "flagsOrdinal": 3,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libnative-lib.so"
+      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libnative-lib.so"
     },
     "clipper-Release-x86": {
-      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\androidproject\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clipper",
+      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clipper",
       "buildType": "release",
-      "toolchain": "2243296795",
+      "toolchain": "1206808255",
       "abi": "x86",
       "artifactName": "clipper",
       "files": [
         {
-          "src": "D:\\androidproject\\3DPrinting10\\app\\src\\main\\cpp\\libs\\clipper\\clipper.cpp",
+          "src": "D:\\new1\\app\\src\\main\\cpp\\libs\\clipper\\clipper.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\androidproject\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libclipper.so"
+      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libclipper.so"
     }
   },
   "toolchains": {
-    "2243296795": {
-      "cppCompilerExecutable": "D:\\sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    "1206808255": {
+      "cppCompilerExecutable": "E:\\AndroidStudio\\SDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
   "cFileExtensions": [],

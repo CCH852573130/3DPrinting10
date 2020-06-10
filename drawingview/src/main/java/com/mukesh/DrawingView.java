@@ -64,12 +64,14 @@ public class DrawingView extends View {
     }
     canvas = new Canvas(bitmap);
     canvas.drawColor(Color.TRANSPARENT);
+    canvas.drawARGB(1,255,255,255);
   }
 
   @Override protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
     canvas.drawBitmap(bitmap, 0, 0, bitmapPaint);
     canvas.drawPath(path, paint);
+    canvas.drawARGB(1,255,255,255);
   }
 
   private void touchStart(float x, float y) {
@@ -78,6 +80,7 @@ public class DrawingView extends View {
     this.x = x;
     this.y = y;
     canvas.drawPath(path, paint);
+    canvas.drawARGB(1,255,255,255);
   }
 
   private void touchMove(float x, float y) {

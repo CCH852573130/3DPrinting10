@@ -9,82 +9,96 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="61dp"
-        android:text="切片设置"
-        android:textSize="30dp"></TextView>
+        android:layout_width="942dp"
+        android:layout_height="100dp"
+        android:text=" 切片设置"
+        android:textColor="@color/materialcolorpicker__black"
+        android:background="#ffffff"
+        android:textSize="70dp"></TextView>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/materialcolorpicker__black"
             android:text="喷头直径(mm)"
-            android:textSize="25dp"></TextView>
-
-
+            android:textSize="40dp"></TextView>
 
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="35dp"
             android:entries="@array/nozzle"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="420dp"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/materialcolorpicker__black"
             android:text="打印温度(℃)"
-            android:textSize="25dp"></TextView>
+            android:textSize="40dp"></TextView>
 
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="720dp"
+            android:layout_marginTop="35dp"
             android:entries="@array/temperature"
             />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="层高（mm)"
-            android:textSize="25dp"></TextView>
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="123dp"
+            android:textColor="@color/materialcolorpicker__black"
+            android:text="层高(mm)"
+            android:textSize="40dp"></TextView>
         <Spinner
             android:id="@+id/spinner3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="123dp"
             android:entries="@array/height"
             />
 
-
         <TextView
-            android:paddingLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="420dp"
+            android:layout_marginTop="123dp"
+            android:textColor="@color/materialcolorpicker__black"
             android:text="打印速度(mm/s)"
-            android:textSize="25dp"></TextView>
+            android:textSize="40dp"></TextView>
         <Spinner
             android:id="@+id/spinner4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="720dp"
+            android:layout_marginTop="123dp"
             android:entries="@array/speed"
-
             />
 
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="确定"></Button>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="220dp"
+            android:textColor="@color/materialcolorpicker__black"
+            android:textSize="35dp"
+            android:text="确定"></Button>
+    </RelativeLayout>
+
 </LinearLayout>

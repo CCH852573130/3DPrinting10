@@ -83,7 +83,7 @@ public class JianBiHua extends AppCompatActivity
         switch (view.getId()) {
             //此处保存按钮能在模型库显示的目录下保存图片（图片名字可自己命名），同时拉伸生成stl文件
             case R.id.save_button:
-                drawingView.saveImage(Environment.getExternalStorageDirectory().toString(), "test",
+                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/Picture/", "test",
                         Bitmap.CompressFormat.PNG, 100);
                 stringFromJNI();//进行切片操作，需要3个文件的路径，目前路径是写死的
                 Toast.makeText( getApplicationContext(),"切片成功",Toast.LENGTH_LONG ).show();

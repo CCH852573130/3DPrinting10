@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DrawingView-Android</string>
+    <string name="app_name">3D Printing</string>
     <string-array name="nozzle">
         <item>0.2</item>
         <item>0.3</item>
