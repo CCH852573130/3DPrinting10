@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.PaintFlagsDrawFilter;
 import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -20,6 +21,7 @@ import java.io.IOException;
 public class DrawingView extends View {
   private static final float TOUCH_TOLERANCE = 4;
   private Bitmap bitmap;
+  private PaintFlagsDrawFilter pfd;
   private Canvas canvas;
   private Path path;
   private Paint bitmapPaint;
@@ -44,15 +46,19 @@ public class DrawingView extends View {
 
   private void init() {
     path = new Path();
-    bitmapPaint = new Paint(Paint.DITHER_FLAG);
+    bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    pfd = new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG);
     paint = new Paint();
     paint.setAntiAlias(true);
+    bitmapPaint.setAntiAlias(true);
     paint.setDither(true);
     paint.setColor(Color.BLACK);
     paint.setStyle(Paint.Style.STROKE);
     paint.setStrokeJoin(Paint.Join.ROUND);
     paint.setStrokeCap(Paint.Cap.ROUND);
     paint.setStrokeWidth(penSize);
+    paint.setFilterBitmap(true);
+
     drawMode = true;
     paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SCREEN));
   }
@@ -65,6 +71,7 @@ public class DrawingView extends View {
     canvas = new Canvas(bitmap);
     canvas.drawColor(Color.TRANSPARENT);
     canvas.drawARGB(1,255,255,255);
+
   }
 
   @Override protected void onDraw(Canvas canvas) {
@@ -72,6 +79,11 @@ public class DrawingView extends View {
     canvas.drawBitmap(bitmap, 0, 0, bitmapPaint);
     canvas.drawPath(path, paint);
     canvas.drawARGB(1,255,255,255);
+    paint.setAntiAlias(true);
+    canvas.setDrawFilter(pfd);
+
+
+
   }
 
   private void touchStart(float x, float y) {
@@ -81,6 +93,9 @@ public class DrawingView extends View {
     this.y = y;
     canvas.drawPath(path, paint);
     canvas.drawARGB(1,255,255,255);
+    canvas.setDrawFilter(pfd);
+    paint.setAntiAlias(true);
+
   }
 
   private void touchMove(float x, float y) {
@@ -92,11 +107,18 @@ public class DrawingView extends View {
       this.y = y;
     }
     canvas.drawPath(path, paint);
+    paint.setAntiAlias(true);
+    canvas.setDrawFilter(pfd);
+
+
   }
 
   private void touchUp() {
     path.lineTo(x, y);
     canvas.drawPath(path, paint);
+    canvas.setDrawFilter(pfd);
+    paint.setAntiAlias(true);
+
     path.reset();
     if (drawMode) {
       paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SCREEN));
@@ -167,6 +189,7 @@ public class DrawingView extends View {
       canvas = new Canvas();
     }
     canvas.drawColor(color);
+    canvas.setDrawFilter(pfd);
     super.setBackgroundColor(color);
   }
 
