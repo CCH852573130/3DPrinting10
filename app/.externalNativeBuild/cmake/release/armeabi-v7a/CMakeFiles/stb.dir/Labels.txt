@@ -1,13 +1,13 @@
 # Target labels
  stb
 # Source files and their labels
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb-complete.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-install.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-mkdir.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-download.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-patch.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-configure.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-build.rule
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-skip-update.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb-complete.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-install.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-mkdir.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-download.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-patch.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-configure.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-build.rule
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-skip-update.rule

@@ -1,6 +1,7 @@
 package com.mukesh.drawingview.example;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Environment;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
 import com.mukesh.DrawingView;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
@@ -33,9 +36,15 @@ public class JianBiHua extends AppCompatActivity
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jianbihua);
+        initPython();
         initializeUI();
         setListeners();
         requestMyPermissions();//添加SD卡动态读写权力
+    }
+    private void initPython(){
+        if (!Python.isStarted()){
+            Python.start(new AndroidPlatform(this));
+        }
     }
     private void requestMyPermissions() {
 
@@ -56,7 +65,10 @@ public class JianBiHua extends AppCompatActivity
             Log.d("TAG", "requestMyPermissions: 有读SD权限");
         }
     }
-
+    private void callPythonCode(){
+        Python py = Python.getInstance();
+        py.getModule("image").get("generateSceneNode").call(Environment.getExternalStorageDirectory().toString() + "/Picture/test4.png",120,20,0.4,100,512,false);
+    }
     private void setListeners() {
         saveButton.setOnClickListener(this);
         penButton.setOnClickListener(this);
@@ -77,17 +89,27 @@ public class JianBiHua extends AppCompatActivity
         eraserSizeSeekBar = findViewById(R.id.eraser_size_seekbar);
         clearButton = findViewById(R.id.clear_button);
     }
-    public native String stringFromJNI();
+//    public native String stringFromJNI();
 
     @Override public void onClick(View view) {
         switch (view.getId()) {
             //此处保存按钮能在模型库显示的目录下保存图片（图片名字可自己命名），同时拉伸生成stl文件
             case R.id.save_button:
-                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/Picture/", "test",
+                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/Picture/", "test4",
                         Bitmap.CompressFormat.PNG, 100);
-                stringFromJNI();//进行切片操作，需要3个文件的路径，目前路径是写死的
+                String stl_path = "/sdcard/Android/data/com.android.browser/files/yushengnan4.stl";
+                callPythonCode();
+//                String gcode_path = Environment.getExternalStorageDirectory().toString() + "test.gocde";
+//                stringFromJNI();//进行切片操作，需要3个文件的路径，目前路径是写死的
                 Toast.makeText( getApplicationContext(),"切片成功",Toast.LENGTH_LONG ).show();
-
+                Intent intent9 = new Intent();
+                intent9.setClass(getApplicationContext(), DaYinJieMian.class);
+                Bundle mBundle = new Bundle();
+//                mBundle.putString("Gcode", gcode_path);//压入数据
+                mBundle.putString("stlpath",stl_path);
+                intent9.putExtras(mBundle);
+                startActivity(intent9);
+                System.exit(0);
                 break;
                 //////////////////////////////////////////////////////////
             case R.id.pen_button:

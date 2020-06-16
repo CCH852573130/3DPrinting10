@@ -1,31 +1,31 @@
 {
   "buildFiles": [
-    "E:\\AndroidStudio\\SDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
-    "D:\\new1\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
-    "E:\\AndroidStudio\\SDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
-    "D:\\new1\\app\\src\\main\\cpp\\CMakeLists.txt"
+    "D:\\sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "D:\\sdk\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "D:\\3DPrinting10\\app\\src\\main\\cpp\\cmake\\FindStb.cmake",
+    "D:\\3DPrinting10\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
+    "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
   ],
   "libraries": {
     "_CuraEngine-Release-arm64-v8a": {
       "artifactName": "_CuraEngine",
-      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target _CuraEngine",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target _CuraEngine",
       "abi": "arm64-v8a",
-      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\lib_CuraEngine.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\lib_CuraEngine.so"
     },
     "native-lib-Release-arm64-v8a": {
       "artifactName": "native-lib",
-      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target native-lib",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target native-lib",
       "abi": "arm64-v8a",
-      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libnative-lib.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libnative-lib.so"
     },
     "clipper-Release-arm64-v8a": {
       "artifactName": "clipper",
-      "buildCommand": "E:\\AndroidStudio\\SDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\new1\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clipper",
+      "buildCommand": "D:\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build D:\\3DPrinting10\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clipper",
       "abi": "arm64-v8a",
-      "output": "D:\\new1\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libclipper.so"
+      "output": "D:\\3DPrinting10\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libclipper.so"
     }
   }
 }

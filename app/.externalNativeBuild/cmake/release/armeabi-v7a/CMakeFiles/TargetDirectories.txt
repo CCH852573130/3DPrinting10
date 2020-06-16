@@ -1,6 +1,6 @@
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb.dir
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/clipper.dir
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/_CuraEngine.dir
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/native-lib.dir
-D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/stb.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/clipper.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/_CuraEngine.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/native-lib.dir
+D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir

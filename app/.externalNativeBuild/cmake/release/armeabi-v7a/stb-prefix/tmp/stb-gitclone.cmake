@@ -4,21 +4,21 @@ endif()
 
 set(run 0)
 
-if("D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitinfo.txt" IS_NEWER_THAN "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt")
+if("D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitinfo.txt" IS_NEWER_THAN "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt")
   set(run 1)
 endif()
 
 if(NOT run)
-  message(STATUS "Avoiding repeated git clone, stamp file is up to date: 'D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt'")
+  message(STATUS "Avoiding repeated git clone, stamp file is up to date: 'D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt'")
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
+  COMMAND ${CMAKE_COMMAND} -E remove_directory "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: 'D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
+  message(FATAL_ERROR "Failed to remove directory: 'D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
 endif()
 
 set(git_options)
@@ -52,8 +52,8 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "D:/msysgit/Git/cmd/git.exe" ${git_options} clone ${git_clone_options} --origin "origin" "https://github.com/nothings/stb.git" "stb"
-    WORKING_DIRECTORY "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src"
+    COMMAND "D:/Git/cmd/git.exe" ${git_options} clone ${git_clone_options} --origin "origin" "https://github.com/nothings/stb.git" "stb"
+    WORKING_DIRECTORY "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src"
     RESULT_VARIABLE error_code
     )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -67,8 +67,8 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "D:/msysgit/Git/cmd/git.exe" ${git_options} checkout d5d052c806eee2ca1f858cb58b2f062d9fa25b90 --
-  WORKING_DIRECTORY "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
+  COMMAND "D:/Git/cmd/git.exe" ${git_options} checkout d5d052c806eee2ca1f858cb58b2f062d9fa25b90 --
+  WORKING_DIRECTORY "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -76,33 +76,33 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "D:/msysgit/Git/cmd/git.exe" ${git_options} submodule init 
-  WORKING_DIRECTORY "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
+  COMMAND "D:/Git/cmd/git.exe" ${git_options} submodule init 
+  WORKING_DIRECTORY "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to init submodules in: 'D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
+  message(FATAL_ERROR "Failed to init submodules in: 'D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
 endif()
 
 execute_process(
-  COMMAND "D:/msysgit/Git/cmd/git.exe" ${git_options} submodule update --recursive --init 
-  WORKING_DIRECTORY "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
+  COMMAND "D:/Git/cmd/git.exe" ${git_options} submodule update --recursive --init 
+  WORKING_DIRECTORY "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: 'D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
+  message(FATAL_ERROR "Failed to update submodules in: 'D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
   COMMAND ${CMAKE_COMMAND} -E copy
-    "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitinfo.txt"
-    "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt"
-  WORKING_DIRECTORY "D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
+    "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitinfo.txt"
+    "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt"
+  WORKING_DIRECTORY "D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'D:/new1/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'D:/3DPrinting10/app/.externalNativeBuild/cmake/release/armeabi-v7a/stb-prefix/src/stb-stamp/stb-gitclone-lastrun.txt'")
 endif()
 
