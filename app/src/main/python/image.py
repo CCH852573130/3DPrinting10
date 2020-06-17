@@ -6,7 +6,7 @@ from MeshBuilder import MeshBuilder
 from Vector import Vector
 from CuraSceneNode import CuraSceneNode as SceneNode
 
-def generateSceneNode(file_name, xz_size, peak_height, base_height, blur_iterations, max_size,lighter_is_higher):
+def generateSceneNode(file_name, xz_size, peak_height, base_height, blur_iterations, max_size,lighter_is_higher,file):
     scene_node = SceneNode()
 
     mesh = MeshBuilder()
@@ -229,7 +229,7 @@ def _writeBinary(stream, node):
             stream.write(struct.pack("<H", 0))
 
 
-file = "/sdcard/Android/data/com.android.browser/files/yushengnan4.stl"
+#file = "/sdcard/Android/data/com.android.browser/files/yushengnan4.stl"
 #xz_size = 120.0
 #peak_height = 20
 #base_height = 0.4

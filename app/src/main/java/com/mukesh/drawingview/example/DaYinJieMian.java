@@ -49,13 +49,12 @@ public class DaYinJieMian extends AppCompatActivity {
         Bundle bundle=getIntent().getExtras();
         File_Path =bundle.getString("Gcode");
         previewpath = bundle.getString("stlpath");
-        setContentView(R.layout.activity_dayinjiemian);
-        RelativeLayout ysn =findViewById(R.id.ysn);
 //        final ConstraintLayout ysn =findViewById(R.id.ysn);
         checkSupported();
         if (supportsEs2) {
-            //
-            glView = new GLSurfaceView(this);
+            setContentView(R.layout.activity_dayinjiemian);
+            RelativeLayout ysn =findViewById(R.id.ysn);
+            glView = new GLSurfaceView(this);//继承至glsurfaceview
             glRenderer = new GLRenderer(this);
             glView.setRenderer(glRenderer);
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(600, 250);
@@ -97,7 +96,7 @@ public class DaYinJieMian extends AppCompatActivity {
         ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         ConfigurationInfo configurationInfo = activityManager.getDeviceConfigurationInfo();
         supportsEs2 = configurationInfo.reqGlEsVersion >= 0x2000;
-
+        //使代码在模拟器上正常工作
         boolean isEmulator = Build.VERSION.SDK_INT > Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1
                 && (Build.FINGERPRINT.startsWith("generic")
                 || Build.FINGERPRINT.startsWith("unknown")
@@ -256,7 +255,7 @@ public class DaYinJieMian extends AppCompatActivity {
     }
     public void rotate(float degree) {
         glRenderer.rotate(degree);
-        glView.invalidate();
+        glView.invalidate();//在主线程中刷新view视图
     }
 
     private Handler handler = new Handler() {

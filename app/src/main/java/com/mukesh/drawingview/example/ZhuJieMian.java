@@ -30,16 +30,16 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
     setContentView(R.layout.activity_zhujiemian);
     //初始化方法
     initUI();
-    connect_status = serialconnect();
+//    connect_status = serialconnect();
   }
-  public int serialconnect() {
-    open = SerialPortUtils.getInstance();
-    open.setSCMDataReceiveListener(new utils.SCMDataReceiveListener() {
-      public void dataRecevie(byte[] buffer, int size) {
-      }
-    });
-    return open.openSerialPort();
-  }
+//  public int serialconnect() {
+//    open = SerialPortUtils.getInstance();
+//    open.setSCMDataReceiveListener(new utils.SCMDataReceiveListener() {
+//      public void dataRecevie(byte[] buffer, int size) {
+//      }
+//    });
+//    return open.openSerialPort();
+//  }
   private void initUI(){
     findViewById(R.id.button1).setOnClickListener(this);
     findViewById(R.id.button2).setOnClickListener(this);

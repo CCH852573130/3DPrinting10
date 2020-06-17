@@ -19,7 +19,7 @@ android {
             abiFilters"armeabi-v7a","x86"
         }
         python{
-            buildPython"D:/Python3.8/python.exe"
+            buildPython"F:/python.exe"
             pip{
                 install "numpy"
                 install "pillow"

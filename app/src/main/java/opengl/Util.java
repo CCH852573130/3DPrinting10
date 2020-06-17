@@ -8,10 +8,10 @@ public class Util {
     public static FloatBuffer floatToBuffer(float[] a) {
         //先初始化buffer，数组的长度*4，因为一个float占4个字节
         ByteBuffer bb = ByteBuffer.allocateDirect(a.length * 4);
-        //数组排序用nativeOrder
+        //数组排序用nativeOrder，以本机字节顺序来修改此缓冲区的字节顺序
         bb.order(ByteOrder.nativeOrder());
         FloatBuffer buffer = bb.asFloatBuffer();
-        buffer.put(a);
+        buffer.put(a);//将float数据写入缓存区
         buffer.position(0);
         return buffer;
     }

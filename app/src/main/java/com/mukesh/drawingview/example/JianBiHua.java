@@ -65,9 +65,9 @@ public class JianBiHua extends AppCompatActivity
             Log.d("TAG", "requestMyPermissions: 有读SD权限");
         }
     }
-    private void callPythonCode(){
+    private void callPythonCode(String stl_path){
         Python py = Python.getInstance();
-        py.getModule("image").get("generateSceneNode").call(Environment.getExternalStorageDirectory().toString() + "/Picture/test4.png",120,20,0.4,100,512,false);
+        py.getModule("image").get("generateSceneNode").call(Environment.getExternalStorageDirectory().toString() + "/test/test4.png",120,20,0.4,100,512,false,stl_path);
     }
     private void setListeners() {
         saveButton.setOnClickListener(this);
@@ -89,18 +89,19 @@ public class JianBiHua extends AppCompatActivity
         eraserSizeSeekBar = findViewById(R.id.eraser_size_seekbar);
         clearButton = findViewById(R.id.clear_button);
     }
-//    public native String stringFromJNI();
+    public native String stringFromJNI6(String stl_path, String gcode_path);
 
     @Override public void onClick(View view) {
         switch (view.getId()) {
             //此处保存按钮能在模型库显示的目录下保存图片（图片名字可自己命名），同时拉伸生成stl文件
             case R.id.save_button:
-                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/Picture/", "test4",
+                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/test/", "test4",
                         Bitmap.CompressFormat.PNG, 100);
-                String stl_path = "/sdcard/Android/data/com.android.browser/files/yushengnan4.stl";
-                callPythonCode();
-//                String gcode_path = Environment.getExternalStorageDirectory().toString() + "test.gocde";
+                String stl_path = "mnt/sdcard/test/test4.stl";
+                callPythonCode(stl_path);
+                String gcode_path = stl_path.replace( "stl","gcode" );
 //                stringFromJNI();//进行切片操作，需要3个文件的路径，目前路径是写死的
+                stringFromJNI6(stl_path,gcode_path);//切片
                 Toast.makeText( getApplicationContext(),"切片成功",Toast.LENGTH_LONG ).show();
                 Intent intent9 = new Intent();
                 intent9.setClass(getApplicationContext(), DaYinJieMian.class);
