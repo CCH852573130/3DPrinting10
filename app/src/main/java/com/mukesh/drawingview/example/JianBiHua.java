@@ -67,7 +67,7 @@ public class JianBiHua extends AppCompatActivity
     }
     private void callPythonCode(String stl_path){
         Python py = Python.getInstance();
-        py.getModule("image").get("generateSceneNode").call(Environment.getExternalStorageDirectory().toString() + "/test/test4.png",120,20,0.4,100,512,false,stl_path);
+        py.getModule("image").get("generateSceneNode").call(Environment.getExternalStorageDirectory().toString() + "/test/test4.png",120,20,0,1,512,false,stl_path);
     }
     private void setListeners() {
         saveButton.setOnClickListener(this);

@@ -1,3 +1,4 @@
+# coding=utf-8
 import numpy
 import time
 import struct
@@ -9,7 +10,7 @@ from CuraSceneNode import CuraSceneNode as SceneNode
 def generateSceneNode(file_name, xz_size, peak_height, base_height, blur_iterations, max_size,lighter_is_higher,file):
     scene_node = SceneNode()
 
-    mesh = MeshBuilder()
+    mesh = MeshBuilder()#初始化
 
   #  img = QImage(file_name)
     im= Image.open(file_name)

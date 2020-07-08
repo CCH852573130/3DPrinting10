@@ -37,6 +37,7 @@ public class DrawingView extends View {
 
   public DrawingView(Context c, AttributeSet attrs) {
     this(c, attrs, 0);
+    init();
   }
 
   public DrawingView(Context c, AttributeSet attrs, int defStyle) {
@@ -46,17 +47,19 @@ public class DrawingView extends View {
 
   private void init() {
     path = new Path();
-    bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);//使位图抗锯齿的标志
+    bitmapPaint.setAntiAlias( true );
+    bitmapPaint.setFilterBitmap( true );
     pfd = new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG);
-    paint = new Paint();
+    paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     paint.setAntiAlias(true);
-    bitmapPaint.setAntiAlias(true);
+    //bitmapPaint.setAntiAlias(true);
     paint.setDither(true);
     paint.setColor(Color.BLACK);
-    paint.setStyle(Paint.Style.STROKE);
+    paint.setStyle(Paint.Style.STROKE);//画笔样式
     paint.setStrokeJoin(Paint.Join.ROUND);
     paint.setStrokeCap(Paint.Cap.ROUND);
-    paint.setStrokeWidth(penSize);
+    paint.setStrokeWidth(penSize);//画笔宽度
     paint.setFilterBitmap(true);
 
     drawMode = true;
@@ -67,6 +70,7 @@ public class DrawingView extends View {
     super.onSizeChanged(w, h, oldw, oldh);
     if (bitmap == null) {
       bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+      bitmap.eraseColor( Color.argb( 0,0,0,0 ) );
     }
     canvas = new Canvas(bitmap);
     canvas.drawColor(Color.TRANSPARENT);
@@ -76,8 +80,9 @@ public class DrawingView extends View {
 
   @Override protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
-    canvas.drawBitmap(bitmap, 0, 0, bitmapPaint);
-    canvas.drawPath(path, paint);
+    canvas.drawColor( Color.WHITE );
+    canvas.drawPath(path, paint);//通过描绘路径的方式绘制图形
+    canvas.drawBitmap(bitmap, 0, 0, bitmapPaint);//bitmap为画布，paint为画笔，canvas为操作
     canvas.drawARGB(1,255,255,255);
     paint.setAntiAlias(true);
     canvas.setDrawFilter(pfd);

@@ -259,7 +259,7 @@ class MeshBuilder:
     #   \param z2 z coordinate of third vertex.
     def addFaceByPoints(self, x0, y0, z0, x1, y1, z1, x2, y2, z2):
         if self._indices is None:
-            self._indices = numpy.zeros((10, 3), dtype=numpy.int32)
+            self._indices = numpy.zeros((10, 3), dtype=numpy.int32)#10个三维数组并规定数据类型
 
         if len(self._indices) == self._face_count:
             self._indices.resize((self._face_count * 2, 3))
