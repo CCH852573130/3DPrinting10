@@ -54,14 +54,15 @@ public class ZhuJieMian extends AppCompatActivity implements View.OnClickListene
       testFolder.mkdir();
 // check whether the model files exist in the phone **/
 // if not, copy them to there                       **/
-      for (int n =0; n < FILE_NAME.length; n++) {
-        File modelFile = new File(testFolder, FILE_NAME[n]);
-        if (!modelFile.exists()) {
-          copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
-        }
-      }
+
       Toast.makeText( getApplicationContext(),"上传资源文件成功",Toast.LENGTH_LONG ).show();
     }
+    for (int n =0; n < FILE_NAME.length; n++) {
+          File modelFile = new File(testFolder, FILE_NAME[n]);
+          if (!modelFile.exists()) {
+              copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
+          }
+      }
   }
 
   private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {

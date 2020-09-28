@@ -1,10 +1,15 @@
 package com.mukesh.drawingview.example;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,11 +33,17 @@ public class JianBiHua extends AppCompatActivity
     private Button saveButton, penButton, eraserButton, penColorButton, clearButton;
     private DrawingView drawingView;
     private SeekBar penSizeSeekBar, eraserSizeSeekBar;
+    private Handler handler;
     // Used to load the 'native-lib' library on application startup.
     static {
         System.loadLibrary("native-lib");
     }
 
+    private ProgressDialog progressDialog;
+    private Thread thread;
+    private String gcode_path,stl_path;
+
+    @SuppressLint("HandlerLeak")
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jianbihua);
@@ -40,6 +51,23 @@ public class JianBiHua extends AppCompatActivity
         initializeUI();
         setListeners();
         requestMyPermissions();//添加SD卡动态读写权力
+        handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage( msg );
+                //关闭对话框并跳转
+                progressDialog.dismiss();
+                Intent intent9 = new Intent();
+                intent9.setClass( getApplicationContext(), DaYinJieMian.class );
+                Bundle mBundle = new Bundle();
+                mBundle.putString( "stlpath", stl_path );
+                mBundle.putString("Gcode", gcode_path);//压入数据
+                intent9.putExtras( mBundle );
+                startActivity( intent9 );
+                System.exit( 0 );
+
+            }
+        };
     }
     private void initPython(){
         if (!Python.isStarted()){
@@ -91,26 +119,39 @@ public class JianBiHua extends AppCompatActivity
     }
     public native String stringFromJNI6(String stl_path, String gcode_path);
 
+
+
     @Override public void onClick(View view) {
         switch (view.getId()) {
             //此处保存按钮能在模型库显示的目录下保存图片（图片名字可自己命名），同时拉伸生成stl文件
             case R.id.save_button:
-                drawingView.saveImage(Environment.getExternalStorageDirectory().getPath()+"/test/", "test4",
-                        Bitmap.CompressFormat.PNG, 100);
-                String stl_path = "mnt/sdcard/test/test4.stl";
-                callPythonCode(stl_path);
-                String gcode_path = stl_path.replace( "stl","gcode" );
+                progressDialog = new ProgressDialog( JianBiHua.this );
+                progressDialog.setTitle( "提示" );
+                progressDialog.setMessage( "正在生成gcode..." );
+                progressDialog.setButton( DialogInterface.BUTTON_POSITIVE, "取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.exit( 0 );
+                    }
+                } );
+                progressDialog.setCancelable( false );
+                progressDialog.show();
+                thread = new Thread( new Runnable() {
+                    @Override
+                    public void run() {
+                        drawingView.saveImage( Environment.getExternalStorageDirectory().getPath() + "/test/", "test4",
+                                Bitmap.CompressFormat.PNG, 100 );
+                        stl_path = "mnt/sdcard/test/test4.stl";
+                        callPythonCode( stl_path );
+                        gcode_path = stl_path.replace( "stl", "gcode" );
 //                stringFromJNI();//进行切片操作，需要3个文件的路径，目前路径是写死的
-                stringFromJNI6(stl_path,gcode_path);//切片
-                Toast.makeText( getApplicationContext(),"切片成功",Toast.LENGTH_LONG ).show();
-                Intent intent9 = new Intent();
-                intent9.setClass(getApplicationContext(), DaYinJieMian.class);
-                Bundle mBundle = new Bundle();
-//                mBundle.putString("Gcode", gcode_path);//压入数据
-                mBundle.putString("stlpath",stl_path);
-                intent9.putExtras(mBundle);
-                startActivity(intent9);
-                System.exit(0);
+                        stringFromJNI6( stl_path, gcode_path );//切片
+                        handler.sendEmptyMessage(0);
+//                        Toast.makeText( getApplicationContext(), "切片成功", Toast.LENGTH_LONG ).show();
+
+                    }
+                } );
+                thread.start();
                 break;
                 //////////////////////////////////////////////////////////
             case R.id.pen_button:

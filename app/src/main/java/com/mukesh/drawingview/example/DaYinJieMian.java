@@ -47,8 +47,8 @@ public class DaYinJieMian extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle=getIntent().getExtras();
-        File_Path =bundle.getString("Gcode");
         previewpath = bundle.getString("stlpath");
+        File_Path =bundle.getString("Gcode");
 //        final ConstraintLayout ysn =findViewById(R.id.ysn);
         checkSupported();
         if (supportsEs2) {

@@ -35,6 +35,16 @@ import java.util.List;
 
 public class 人物角色 extends AppCompatActivity  {
     private GridView mGv;
+    private static final String FILE_NAME[] = {
+            "a.png",
+            "b.png",
+            "c.png","d.png","e.png","p2.png"
+    };
+    private static final String FILE_NAME2[] = {
+            "a.STL",
+            "b.STL",
+            "c.STL","d.STL","e.STL","p2.STL"
+    };
     static {
         System.loadLibrary("native-lib");
     }
@@ -101,6 +111,32 @@ public class 人物角色 extends AppCompatActivity  {
         }
     }
 
+    private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    InputStream is = getAssets().open(FileToCopy);
+                    FileOutputStream fos = new FileOutputStream(testFileOnSdCard);
+                    byte[] buffer = new byte[8192];
+                    int read;
+                    try {
+                        while ((read = is.read(buffer)) != -1) {
+                            fos.write(buffer, 0, read);
+                        }
+                    } finally {
+                        fos.flush();
+                        fos.close();
+                        is.close();
+                    }
+                } catch (IOException e) {
+                    Log.d("aaa", "Can't copy test file onto SD card");
+                }
+            }
+        }).start();
+    }
+
+
     @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +162,51 @@ public class 人物角色 extends AppCompatActivity  {
                 System.exit( 0 );//退出的是跳转前的界面
             }
         };
-        String sdpath = Environment.getExternalStorageDirectory() + "/renwujuese/picture";//获得SD卡中图片的路径
+        String sdpath3 = Environment.getExternalStorageDirectory() + "/renwujuese";
+        String sdpath = Environment.getExternalStorageDirectory() + "/renwujuese/picture";
+        String sdpath1 = Environment.getExternalStorageDirectory() + "/renwujuese/stl_file";
+        String sdpath2 = Environment.getExternalStorageDirectory() + "/renwujuese/gcode_file";
+        File testFolder1 = new File( sdpath);
+        File testFolder2 = new File( sdpath1);
+        File testFolder3 = new File( sdpath2);
+        File testFolder4 = new File( sdpath3);
+        if(testFolder3.exists() && testFolder1.isDirectory() ) {
+
+        } else if(!testFolder3.exists()) {
+            testFolder3.mkdir();
+
+        }
+        if(testFolder1.exists() && testFolder1.isDirectory() ) {
+
+        } else if(!testFolder1.exists()) {
+            testFolder1.mkdir();
+
+        }
+        if(testFolder2.exists() && testFolder2.isDirectory() ) {
+
+        } else if(!testFolder2.exists()) {
+            testFolder2.mkdir();
+
+        }
+        if(testFolder4.exists() && testFolder4.isDirectory() ) {
+
+        } else if(!testFolder4.exists()) {
+            testFolder4.mkdir();
+
+        }
+
+        for (int n =0; n < FILE_NAME.length; n++) {
+            File modelFile = new File(testFolder1, FILE_NAME[n]);
+            if (!modelFile.exists()) {
+                copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
+            }
+        }
+        for (int n =0; n < FILE_NAME2.length; n++) {
+            File modelFile = new File(testFolder2, FILE_NAME2[n]);
+            if (!modelFile.exists()) {
+                copyAssetFilesToSDCard(modelFile, FILE_NAME2[n]);
+            }
+        }
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
         if (imagePath.size() < 1) {//如果不存在文件图片
             return;

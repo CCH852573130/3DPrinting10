@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +15,22 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MoXingKuShouYe extends AppCompatActivity {
     private GridView mGv;
+    private static final String FILE_NAME[] = {
+            "人物角色.png",
+            "动物植物.png",
+            "工具配件.png","教育学习.png"
+    };
     private static List<String> imagePath=new ArrayList<String>();//图片文件的路径
     private static String[] imageFormatSet=new String[]{"jpg","png","gif"};//合法的图片文件格式
     /*
@@ -36,6 +46,32 @@ public class MoXingKuShouYe extends AppCompatActivity {
         }
         return false;
     }
+
+    private void copyAssetFilesToSDCard(final File testFileOnSdCard, final String FileToCopy) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    InputStream is = getAssets().open(FileToCopy);
+                    FileOutputStream fos = new FileOutputStream(testFileOnSdCard);
+                    byte[] buffer = new byte[8192];
+                    int read;
+                    try {
+                        while ((read = is.read(buffer)) != -1) {
+                            fos.write(buffer, 0, read);
+                        }
+                    } finally {
+                        fos.flush();
+                        fos.close();
+                        is.close();
+                    }
+                } catch (IOException e) {
+                    Log.d("aaa", "Can't copy test file onto SD card");
+                }
+            }
+        }).start();
+    }
+
     /*
      * 方法:用于遍历指定路径
      * 参数:String url遍历路径
@@ -70,6 +106,19 @@ public class MoXingKuShouYe extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_mo_xing_ku_shou_ye );
         String sdpath = Environment.getExternalStorageDirectory() + "/classify";//获得SD卡中图片的路径
+        File testFolder1 = new File( sdpath);
+        if(testFolder1.exists() && testFolder1.isDirectory() ) {
+
+        } else if(!testFolder1.exists()) {
+            testFolder1.mkdir();
+
+        }
+        for (int n =0; n < FILE_NAME.length; n++) {
+            File modelFile = new File(testFolder1, FILE_NAME[n]);
+            if (!modelFile.exists()) {
+                copyAssetFilesToSDCard(modelFile, FILE_NAME[n]);
+            }
+        }
         getFiles( sdpath );//调用getFiles()方法获取SD卡上的全部图片
         if (imagePath.size() < 1) {//如果不存在文件图片
             return;
